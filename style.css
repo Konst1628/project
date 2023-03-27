@@ -1,0 +1,81 @@
+h1,h2  {background-color: rgb(7, 177, 7);}
+
+body {background-color: rgb(211, 221, 68)!important; } 
+
+.hello {font-weight: bolder;
+    font-size: 18;
+    color: darkmagenta !important;
+    color: teal;
+    font-family: 'Lucida Sans';
+    font-style: unset;
+    background-clip: padding-box;
+    }
+
+.hi {color: white;
+    color:  blue;
+    }
+
+.good { color: yellow;
+font-size: small;
+font-family: 'Courier New', Courier, monospace;
+    }
+
+.day { 
+    color: rgb(38, 0, 255);
+font-size: x-large;
+    }
+
+.yes {
+    color:  brown;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+text-shadow: chartreuse;
+background-size: initial;
+font-size: 22px;
+    }
+/* комментарий */
+
+.two.words { 
+    background-color: pink !important; 
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif; 
+    }
+/* .two.words без пробелов!!! */
+
+body {background-color: purple ;}
+
+.two.words {
+    background-color: purple;
+    font-size: 22px;
+}
+.good, .day {font-size: 22px}
+
+.font {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: 500;
+    color: blueviolet;
+}
+
+#warning2 {font-weight: bold;
+color: red;
+font-size: 16px;
+}
+.new {font-family:Verdana, Geneva, Tahoma, sans-serif; }
+
+.you { color: rgb(114, 128, 250);}
+
+div[align] {font-weight: bolder;}
+
+div[align="center"] {font-family: Verdana, Geneva, Tahoma, sans-serif;}
+
+h1 b {color:red;}
+
+.two.words .ttt {color:rgb(4, 0, 255)}
+.two.words {color:violet}
+
+p > i {color: rgb(128, 0, 96);}
+
+b+i {color: yellow;}
+
