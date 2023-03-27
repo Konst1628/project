@@ -1,0 +1,29 @@
+
+#out {color: blueviolet;}
+p[align="left"] {
+    color: aqua;
+}
+
+.sbox{
+    background: #f0f0f0;
+    color:blue}
+
+h1+p{color: brown;}
+
+div p{color: aquamarine;}
+
+div>p {color: rgb(113,27,73);}
+
+p{color: red;}
+*{color:black }
+
+p{
+    color: rgb(255,255,0);
+}
+h1{
+    color: rgba(255, 255, 0, 0.5);
+}
+h2{
+    color: rgb(255, 255, 255);
+background: rgb(0, 0, 0);
+}
