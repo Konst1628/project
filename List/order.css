@@ -1,0 +1,59 @@
+li.red {color: red;}
+
+li.green {color: #15db15;}
+
+ol.zero{
+    list-style-type: decimal-leading-zero;
+    list-style-type: square;
+    list-style-type: none;
+    list-style-type: circle;
+    list-style-type: disc;
+
+}
+
+ul{
+    color: rgb(226, 81, 65);
+list-style-type: lower-alpha;
+list-style-type:upper-roman;
+list-style-type: circle;
+}
+
+dl{color: slateblue;
+list-style-type: lower-greek;
+}
+.blue{color: blue;
+}
+.ppp{color: rgb(0, 0, 0);}
+
+.padding{background-color: rgb(21, 121, 121);
+padding: 50px;
+}
+.margin{background-color: blueviolet;
+margin: 70px;
+}
+
+ol.element{list-style-type: none;
+counter-reset: number;}
+
+ol.element li::before{
+     content: counter(number)')';/*вместо ( можно ставить любой символ №,%,:,? */
+    counter-increment: number;
+}
+
+blockquote::before {content: "«";}
+
+blockquote::after{content: "»";}
+
+ul.element2{list-style-type: none;
+font-style: italic;}
+ul.element2 li::before {content:'   -   ';
+background-color: rgb(176, 155, 196);
+color: #04b548;}
+
+
+img {border: 20px green solid;
+height: 200px;
+width: 200px;
+border-radius: 100px;
+
+} 
