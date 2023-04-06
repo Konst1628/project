@@ -1,0 +1,41 @@
+div.min-w {
+    background-color: aqua;
+    width: 70%;
+    height: 200px;
+    min-height: 363px;
+}
+
+div.max-w {
+    background-color: rgb(37, 61, 165);
+    width: 80%;
+    height: 300px;
+    max-width: 400px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+
+div.min-h {
+    background-color: rgb(126, 78, 111);
+    width: 80%;
+    height: 70%;
+    min-width: 20px;
+}
+
+div.max-h {
+    background-color: rgb(172, 24, 125);
+    width: 80%;
+    height: 70%;
+    max-height: 498px;
+}
+
+div.overflow {
+    background-color: darkgreen;
+    overflow:scroll;
+width: 200px;
+height: 100px;
+}
