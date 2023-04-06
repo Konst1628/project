@@ -1,0 +1,17 @@
+body{margin: 0;font-family: sans-serif;}
+
+header{background-color: #ff6825;
+text-align: center;
+height: 150px;
+padding: 8% 0;
+}
+
+h1 {margin: 0;
+font-size: 3.5rem;
+text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+
+header h2{font-size: 3rem;
+color: rgb(97, 96, 153); text-shadow: 2px 2px 2px rgba(202, 192, 192, 3.1);
+margin: 1.2rem;
+}
