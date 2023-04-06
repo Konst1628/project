@@ -1,0 +1,33 @@
+table {border: 2px solid black;
+/*border-collapse: separate;
+border-collapse: collapse;
+border-spacing: 10px;
+border: 30px solid #000;
+*/
+border-radius: 30px;
+border: 30px solid #000;
+border-image:url("123.jpg") 30;
+empty-cells: hide;
+}
+
+th {border: 1px solid red;
+}
+td {border: 1px solid blue;
+}
+
+#uniq {
+width: 50px;
+height: 40px;
+text-align: right;
+vertical-align: bottom;
+background-color: #553e3ef9;
+/*background-image: url("123.jpg");*/
+
+
+}
+
+.www{
+    width: 70px;
+height: 50px;
+
+}
