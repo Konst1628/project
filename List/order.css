@@ -54,6 +54,7 @@ color: #04b548;}
 img {border: 20px green solid;
 height: 200px;
 width: 200px;
-border-radius: 100px;
+border-radius: 500px;
+border-end-end-radius: 300px;
 
 } 
