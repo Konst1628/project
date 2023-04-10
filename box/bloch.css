@@ -93,3 +93,27 @@ mark:only-child {background-color: #45abf5;
     font-weight: bold;
     color:blue;
 }
+
+.block{
+    display: inline-block;
+    width: 21%;
+    height: 150px;
+    line-height:    170%;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 2%;
+    border: 2px solid;
+}
+
+.block:first-of-type{
+    background-color: green;
+}
+.block:nth-of-type(2) {
+    background-color: #32c132;
+}
+
+.block:nth-of-type(3) {
+    background-color: #aff062;
+}
+.block:last-of-type {background-color: #dee863;}
