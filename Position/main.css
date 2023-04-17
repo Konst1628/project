@@ -29,5 +29,56 @@ h2{
     vertical-align: top;
     border-radius: 15px;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px --5px rgba(0,0,0,0.2);
+    position: relative;
 }
 .team:last-child {margin-right: 0;}
+
+.team h3{
+    text-align: center;
+    margin: 10px 40px 50px 20px;
+}
+
+img { width: 70px;
+height: 80;}
+
+.icon{
+    float: right;
+    margin-right: -15px;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.4rem;
+    padding-top: 15px;
+    background-image: linear-gradient(#ccc, #fff);
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    z-index: 1;
+}
+
+.circle-back {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-image: linear-gradient(#ff0, #ffba00);
+    box-shadow: 2px 4px 2px 2px rgba(0, 0, 0, 0.14);
+    position: absolute;  
+    left: -16px;
+    top: 17px;
+}
+.team:nth-of-type(2) .circle-back {
+    background-image: linear-gradient(#ff7c7c, #db3811);
+}
+.team:nth-of-type(3) .circle-back {
+    background-image: linear-gradient(#21e6d1, #08a392);
+}
+.team:nth-of-type(4) .circle-back {
+    background-image: linear-gradient(#be75f4, #7d1fc3);
+}

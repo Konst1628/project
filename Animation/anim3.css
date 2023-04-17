@@ -1,0 +1,52 @@
+.example{
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    border-top-color:blue;
+    border-right-color: yellow;
+    border-bottom-color: red;
+    transform-origin: 50% 50%;
+    transform: rotate(45deg);
+    transform: translate(10px,10px);
+}
+
+.point{
+    width: 3px;
+    height: 3px;
+    background-color: black;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#callback {
+width: 300px;
+height: 150px;
+background-color: grey;
+}
+
+#callback p {
+    color: #fff;
+    padding:30px;
+}
+
+#callback::after{
+    content: 'Обратная связь';
+    background-color: pink;
+    text-align: center;
+    border-radius: 0 0 8px 8px;
+    padding: 5px 0;
+    width: 150px; /*Ширина псевдоэлемента равна высоте блока тк будет поворот*/
+    position: absolute; /*позиционирование абсолютное*/
+    left: 300px; /*позиция слева равна ширине блока #callback*/
+    top: 150px;/*позиция сверху равна высоте блока*/
+    transform: rotate(-90deg);
+    transform-origin: 0 0;  
+}
