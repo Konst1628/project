@@ -1,0 +1,24 @@
+.container {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex {
+    background: #6AB6D8;
+    padding: 10px;
+    margin-bottom: 50px;
+    border: 3px solid #2E86bb;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.flex1 {flex-basis: auto;}
+.flex2 {flex-basis: 10%;}
+.flex3 {flex-basis: 10%;
+min-width: 300px;}
+.flex4 {flex-basis: 200px;}

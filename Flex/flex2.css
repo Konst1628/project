@@ -1,0 +1,28 @@
+.flex-container {
+    display: flex; padding: 10px;
+    background: gold;
+    border-radius: 10px;
+    justify-content: flex-start;
+   
+}
+
+.flex-item {margin: 10px;
+padding: 5px;
+background: tomato;
+border-radius: 5px;
+border: 1px solid #fff;
+}
+
+body * + * {
+    margin-top: 10px;
+}
+
+.flex-end {justify-content: flex-end;}
+
+.center {display: flex; justify-content: center;}
+
+.space-between {justify-content: space-between;}
+
+.space-around {justify-content: space-around;}
+
+.space-evenly {justify-content: space-evenly;}

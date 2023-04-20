@@ -1,0 +1,27 @@
+body {
+    padding: 20px;
+    background: white;
+}
+.flex-container {
+    padding: 10px;
+    background: gold;
+    border-radius: 10px;
+    display: flex;
+}
+
+.flex-item {margin: 10px;
+padding: 5px;
+background: tomato;
+border-radius: 5px;
+border: 1px solid #fff;
+}
+
+body *+* {
+    margin-top: 10px;
+}
+
+.row-reverse {flex-direction: row-reverse;}
+
+.column {flex-direction: column;}
+
+.column-reverse {flex-direction: column-reverse;}

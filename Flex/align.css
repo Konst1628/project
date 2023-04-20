@@ -1,0 +1,31 @@
+.flex-container {
+    display: flex;
+     padding: 10px;
+    background: gold;
+    border-radius: 10px;
+    height: 100px;
+    flex-wrap: wrap-reverse;
+   
+}
+
+.flex-item {
+margin: 10px;
+padding: 5px;
+background: tomato;
+border-radius: 5px;
+border: 1px solid #fff;
+}
+
+body * + * {
+    margin-top: 10px;
+}
+
+.stretch {align-items: stretch;}
+.align-start {align-items: start;}
+.align-end {align-items: end;}
+.align-center {align-items: center;}
+.baseline {align-items: baseline;}
+
+.flex-item:nth-child(3) {align-self: stretch;}
+.flex-item:nth-child(4) {align-self: flex-end;}
+
