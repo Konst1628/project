@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>repeat</title>
+    <style>
+        div {width: 500px; height:500px; border: 2px solid black; background-image: url('432.jpg');}
+        .top-outer-left {background-repeat: repeat-x;}
+        .top-inner-left {background-repeat: repeat-y;}
+        .top-inner-right {background-repeat: repeat;}
+        .top-outer-right {background-repeat: space;}
+        .bottom-outer-left {background-repeat: round;}
+        .bottom-inner-left {background-repeat: no-repeat;}
+    </style>
+</head>
+<body>
+    <div class="top-outer-left"></div>
+    <div class="top-inner-left"></div>
+    <div class="top-inner-right"></div>
+    <div class="top-outer-right"></div>
+    <div class="bottom-outer-left"></div>
+    <div class="bottom-inner-left"></div>
+</body>
+</html>

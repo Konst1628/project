@@ -19,6 +19,6 @@
 
 .flex1 {flex-basis: auto;}
 .flex2 {flex-basis: 10%;}
-.flex3 {flex-basis: 10%;
+.flex3 {flex-basis: 50%;
 min-width: 300px;}
 .flex4 {flex-basis: 200px;}

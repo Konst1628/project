@@ -1,0 +1,21 @@
+.flex-container {
+    display: flex;
+    width: 500px;
+    height: 200px;
+}
+
+.flex-item-1 {
+    flex-basis: 150px;
+    flex-shrink: 1;
+    background-color: aqua;
+}
+.flex-item-2 {
+    flex-basis: 200px;
+    flex-shrink: 2;
+    background-color: aquamarine;
+}
+.flex-item-3 {
+    flex-basis: 300px;
+    flex-shrink: 3;
+    background-color: antiquewhite;
+}
