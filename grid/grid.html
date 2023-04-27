@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            padding: 15px 30px;
+            border-radius: 5px;
+            background-color: #0d233d;
+            color: #ffffff;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .grid-container>div {
+            margin: 10px 0;
+            padding: 0.3em;
+            border-radius: 3px;
+            font-size: 130%;
+            font-weight: bold;
+        }
+        .item-1 {background-color: #aa2f26;}
+        .item-2 {background-color: #01796f;}
+        .item-3 {background-color: #1769aa;}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+    <div class="item-1">child-item-1</div>
+    <div class="item-2">child-item-2</div>
+    <div class="item-3">child-item-3</div>
+</div>
+</body>
+</html>

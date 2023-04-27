@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clip</title>
+<style>
+    body{display: flex; gap: 10px;}
+    div {
+        width: 200px; height: 300px;
+        background-size: 50%;
+        background-color:#ffdb3a;
+        background-repeat: no-repeat;
+        background-position: top left;
+        border: 10px dotted black; padding: 20px;
+    }
+    .left {background-clip: border-box;}
+    .middle {background-clip: padding-box;}
+    .right {background-clip: content-box;}
+</style>
+
+</head>
+<body>
+    <div class="left"></div>
+    <div class="middle"></div>
+    <div class="right"></div>
+</body>
+</html>

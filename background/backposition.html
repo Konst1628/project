@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        body {
+            display: flex;
+            gap: 10px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            border: 2px solid black;
+            background-size: 50%;
+            background-image: url('123.jpg');
+            background-repeat: no-repeat;
+        }
+
+        .top-left {
+            background-position: top;
+        }
+
+        .top-middle {
+            background-position: right;
+        }
+
+        .top-right {
+            background-position: bottom;
+        }
+
+        .bottom-left {
+            background-position: left;
+        }
+
+        .bottom-right {
+            background-position: center;
+        }
+        .left {background-position: 20px 70px;
+        }
+        .right { background-position: 50%;}
+    </style>
+</head>
+
+<body>
+    <div class="top-left"></div>
+    <div class="top-middle"></div>
+    <div class="top-right"></div>
+    <div class="bottom-left"></div>
+    <div class="bottom-right"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+
+</body>
+
+</html>

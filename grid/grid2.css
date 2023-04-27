@@ -1,0 +1,26 @@
+.container {
+    padding: 30px;
+    border-radius: 5px;
+    background-color: #0d233d;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container>div {
+    padding: 0.3em;
+    border-radius: 3px;
+    font-size: 130%;
+    font-weight: bold;
+}
+
+.grid-container {
+    display: grid;
+    background-color: #b2a429;
+}
+
+.inline-grid-container {
+    display:inline-grid;
+    background-color: #aa2f26;
+}
+p {color:rgb(245,248,249);}
