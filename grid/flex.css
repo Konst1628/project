@@ -1,0 +1,27 @@
+.flex {
+display: flex; 
+padding: 10px;
+border-radius: 3px;
+background-color: #0d233d;
+font-family: Arial, Helvetica, sans-serif;
+color: #fff;
+text-transform: uppercase;
+}
+
+.item-1 {
+    flex-basis: 80px;
+    flex-shrink: 1;
+}
+.item-2 {
+    flex-basis: 1500px;
+    flex-shrink: 2;
+   
+}
+.item-3 {
+    flex-basis: 100px;
+    flex-shrink: 3;
+   
+}
+/*
+div > div:nth-child(3) {margin-left: auto;} */
+
