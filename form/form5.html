@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form5</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <form action="/search" method="POST">
+        <label for="form"> <b>Форма регистрации пользователя:</b></label> <br>
+
+        <label>ФИО</label>
+        <input type="text" name="firstname" value="Введите ваше ФИО" />
+        <br>
+
+        <label>Пароль</label>
+        <input type="password" name="pass" value="" placeholder="Пароль">
+        <br>
+        <label>Телефон</label>
+        <input type="text" id="phone" name="userPhone"/>
+        <br>
+
+        <label>Email</label>
+        <input type="text" id="email" name="userEmail" />
+        <br>
+        <label>Дата рождения</label>
+        <input type="text" id="birthday" name="userBirthday" />
+        <br>
+        <label>Хобби</label>
+        <input type="text" id="checkbox" name="userCheckbox" />
+        <br>
+        <label>Пол</label>
+        <input type="text" id="radio" name="userRadio" />
+        <br>
+        <input type="submit" value="Отправить форму регистрации" />
+
+    </form>
+<br><br><br><br>
+    <form>
+        <label> Имя:</label> <input type = "text" name = "firstname" value = "Введите Ваше имя"> <br>
+        <label>Фамилия:</label> <input type = "text" name = "lastname" value = "Введите Вашу фамилию"> <br>
+        <label>Пароль:</label><input type="password" name="pass" value="" placeholder="Пароль"><br>
+        <label>Телефон:</label> <input type="tel" name="phone" placeholder="+375 29 123-12-20" required><br>
+        <label>Email</label><input type="text" id="email" name="userEmail" /><br>
+        <label>Дата рождения</label> <input type="date"><br>
+        <label>Мужчина</label> <input type = "radio" name = "sex" value = "male" checked>
+        <label>Женщина</label> <input type = "radio" name = "sex" value = "female"> <br>
+        <input type="checkbox" name="" value="rad1"> Плаванье<br/>
+        <input type="checkbox" name="" value="rad2"> Рисование<br/>
+        <input type="checkbox" name="" value="rad3"> Чтение<br/>
+        <input type = "submit" name = "submit" value = "Отправить">
+    </form> 
+</body>
+
+</html>

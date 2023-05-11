@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form>
+<input type="radio" name="drink" value="rad1">Сок<br>
+<input type="radio" name="drink" value="rad1">Чай<br>
+<input type="radio" name="drink" value="rad1">Кофе<br>
+<input type="submit" value="Отправить">
+    </form>
+    <form>
+        <input type="checkbox" name="drink[]" value="rad1">Сок<br>
+        <input type="checkbox" name="drink[]" value="rad2">Чай<br>
+        <input type="checkbox" name="drink[]" value="rad3">Кофе<br>
+        <input type="submit" value="Отправить">
+    </form>
+<br><br><br><br><br>
+    <form>
+        <select>
+            <optgroup label="Цвет">
+                <option value="c1">Апельсиновый</option>
+                <option value="c2">Лимонный</option>
+                <option value="c3">Персиковый</option>
+            </optgroup>
+            <optgroup label="Тон">
+                <option value="s1">Светлый</option>
+                <option value="s2">Нормальный</option>
+                <option value="s3">Темный</option>
+            </optgroup>
+        </select>
+        <input type="submit" value="Отправить">
+    </form>
+<br><br><br>
+<form action="#" method="post">
+    <b>Введите ваш отзыв:</b>
+    <textarea rows="10" cols="45" name="text" style="overflow-x:scroll;"></textarea>
+    <input type="submit" value="Отправить">
+</form>
+</body>
+</html>

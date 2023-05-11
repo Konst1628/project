@@ -1,0 +1,46 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+label{
+    display: inline-block;
+    width: 70px;
+    text-align: right;
+}
+
+form li + li {
+    margin-top: 0.5em;
+}
+
+/* Задаем настройки для ширины формы, границ, отступов */
+
+form {
+    width: 300px;
+    padding: 1em;
+    border: 1px solid rgba(23, 4, 56, 0.829);
+    border-radius: 2em;
+}
+
+textarea {
+    vertical-align: top;
+}
+input, textarea {
+    /* Устанавливаем один и тот же шрифт для inpup и textarea. 
+    По умолчанию в textarea используется monospace*/
+    font: 1em sans-serif;
+    width: 200px;
+    border: 1px solid #777;
+}
+input:focus,
+textarea:focus {
+    /* Делаем подсветку для элемента в фокусе */
+    border-color: #000;
+}
+/* центрируем нашу кнопку */
+input [id="submitBtn"]  {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

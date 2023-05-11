@@ -1,0 +1,49 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 0.2em;
+}
+
+
+form {
+    width: 300px;
+    font-family: Verdana, sans-serif;
+    font-size: 15px;
+    padding: 1em;
+    border: 1px solid #000;
+    border-radius: 1em;
+}
+
+
+input {
+    font: 1em sans-serif;
+    width: 150px;
+    box-sizing: border-box;
+    border: 1px solid #777;
+}
+
+input:focus {
+    border-color: rgb(25, 11, 100);
+}
+
+input [type="checkbox"],
+input [type="radio"] {
+    width: auto;
+}
+
+
+input [id="submitBtn"]  {
+    display: block;
+    width: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+label span {width: 90px;
+text-align: right;
+display: inline-block;}
