@@ -1,0 +1,33 @@
+@keyframes moveLeft  {0% {
+transform: translate(-100%);
+opacity: 0;
+}
+}
+
+@keyframes moveRight  {0% {
+    transform: translateX(100%);
+    opacity: 0;
+}
+}
+
+header { 
+    height: 500px;
+    background: url(
+https://source.unsplash.com/NVHDSYqBZCE/1920x1080) no-repeat center #0f1384; 
+background-size: cover;
+color: #fff;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+h1 {
+    font-size: 3em;
+    animation: moveLeft .5s ease-out .3s;
+}
+
+header h2 {
+    font-size: 2em;
+    animation: moveRight .5s ease-out .8s;
+}
