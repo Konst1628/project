@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:500); 
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Montserrat, Arial, sans-serif;
+    font-weight: 500;
+}
+
+a {color: #0f1384;}
+a:hover {color: #151abc;}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.heading {
+    font-size: 3rem;
+    line-height: 1.5;
+    text-align: center;
+    margin: 3.5rem 0;
+    color: #1a1a1a;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.column-2 {
+    flex: 0 0 50%;
+}
+
+[class*="column-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 1px;
+    max-width: 100%;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}

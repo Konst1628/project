@@ -1,0 +1,40 @@
+label {display: inline-block; margin-bottom: 10px;}
+
+input, textarea {
+    height: 38px;
+    width: 100%;
+    padding: 6px 10px;
+    background-color: #fff;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 12px rgba(15, 19, 132, 0.38);
+}
+
+textarea {
+    min-height: 145px;
+}
+
+.btn {
+    display: inline-block;
+    height: 38px;
+    padding: 0 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 38px;
+    letter-spacing:  .1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #0f1384;
+    cursor: pointer;
+    transition:  .5s;
+}
+
+.btn:hover {
+    background: #8488f8;
+    text-decoration: none;
+}
