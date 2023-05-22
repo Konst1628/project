@@ -1,0 +1,20 @@
+#footer {
+    background-color: #0f1384;
+    color: #fff;
+    margin-top: 3.5rem;
+    padding: 20px 0;
+}
+
+#footer .row {
+    margin: 0;
+}
+
+#footer a {
+    color: #c0d9fc;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
