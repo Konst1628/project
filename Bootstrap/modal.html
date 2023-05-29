@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="
+https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css
+">
+</head>
+<body>
+    <!-- кнопка, при нажатии на которую откроется модальное окно. имеет связь с окном через
+    идентификатор модального окна, который прописывается после # в атрибуте data-target -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalWindow">
+        Кликни, чтобы увидеть модальное окно
+    </button>
+    <!-- блочный элемент-контейнер с классом modal и уникальным идентификатором modalWindow, который связан с кнопкой. -->
+    <div class="modal fade" id="modalWindow" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- блочный элемент-контейнер для диалогового модального окна -->
+        <div class="modal-dialog">
+            <!-- блочный элемент-контейнер для контента -->
+            <div class="modal-content">
+                <!-- блочный элемент-контейнер для шапки контента -->
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        Заголовок модального окна
+                    </h5>
+                    <!--кнопка для закрытия модального окна -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times; </span>
+                    </button>
+                </div>
+                <!-- блочный элемент-контейнер для основной части -->
+                <div class="modal-body">
+                    <p>Основное содержимое модального окна</p>
+                </div>
+                <!-- блочный элемент-контейнер для подвала контента -->
+                <div class="modal-footer">
+                    <!-- кнопка для закрытия модального окна -->
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    Закрыть
+                    </button>
+                    <!--дополнительные кнопки с различнымфункционалом -->
+                    <button type="button" class="btn btn-primary">
+                    Кнопка в подвале
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="
+https://code.jquery.com/jquery-3.5.1.slim.min.js
+"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js
+"> </script>
+
+<script src="
+https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js
+">  </script>
+</body>
+</html> 

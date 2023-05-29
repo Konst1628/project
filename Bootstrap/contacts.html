@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="
+    https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css
+    ">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col navbar navbar-expand-md navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Bootstrap</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <div class="navbar-nav text-uppercase">
+                        <!--добавляем класс active к пункту меню текущей страницы-->
+                        <a class="nav-link active" href="#">Home</a>
+                        <a class="nav-link" href="blog.html">Blog</a>
+                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-md mt-5">
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Find us here</h2>
+                        <div class="embed-responsive embed-responsive-21by9">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1915.1044029929546!2d30.24894883595222!3d55.19278866662038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46c5775e24d021c5%3A0x32485412d9e05f72!2z0JDQstGC0L7RgdGC0LjQu9GMINCo0LjQvdC-0LzQvtC90YLQsNC2!5e0!3m2!1sru!2sby!4v1685382519669!5m2!1sru!2sby"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-12 pt-3">
+                        <h2>Address</h2>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Belarus, ZP</li>
+                            <li class="list-group-item">Phone</li>
+                            <li class="list-group-item">Email
+                                info@company.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h2>Contact us</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="mobile">Mobile</label>
+                        <input type="text" class="form-control" id="mobile" name="mobile">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <textarea class="form-control" id="subject" name="subject"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-light text-light bg-dark text-uppercase"
+                        name="send">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <footer class="container-fluid mt-5 pt-3 bg-dark">
+        <div class="row row-cols-1">
+            <div class="col">
+                <div class="text-center">
+                    <a href="#" class="btn btn-light text-light bg-dark text-uppercase">Facebook</a>
+                    <a href="#" class="btn btn-light text-light bg-dark text-uppercase">Twitter</a>
+                    <a href="#" class="btn btn-light text-light bg-dark text-uppercase">Instagram</a>
+                </div>
+            </div>
+            <div class="col text-center text-light mt-2">
+                <p>&copy;2020 All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

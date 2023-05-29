@@ -5,3 +5,8 @@
     background-size: 100%;
     background-repeat: no-repeat;
 }
+
+img {
+    width: 100px;
+    height: 100px;
+}
