@@ -1,0 +1,24 @@
+/*переменная для фонового цвета блока*/
+/*переменная для цвета текста блока*/
+div {
+  background-color: #aa5a5a;
+  color: #eee;
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*переменная-имя селектора*/
+.border {
+  border: 5px dotted #eee;
+}
+#center {
+  padding: 10px;
+}
+.image {
+  background: url("images/nature4.jpg");
+  border: 5px dotted #eee;
+  background-size: cover;
+  background-position: right;
+}

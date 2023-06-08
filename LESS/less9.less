@@ -1,0 +1,7 @@
+@col1: #0000ff;
+@col2:#dddddd;
+@colText:average(@col1, @col2);
+@colBG:negation(@col1, @col2);
+div {color: @colText;
+background-color: @colBG;
+}

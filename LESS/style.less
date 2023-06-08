@@ -1,0 +1,37 @@
+
+/*переменная для фонового цвета блока*/
+@div-background:#aa5a5a;
+
+/*переменная для цвета текста блока*/
+@div-color: #eee;
+
+div{
+background-color: @div-background;
+color: @div-color;
+width: 200px;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+/*переменная-имя селектора*/
+@selector-class:border;
+@selector-id:center;
+.@{selector-class} {
+    border: 5px dotted @div-color;
+}
+
+#@{selector-id} {
+    padding: 10px;
+}
+
+
+@path: "images/";
+@selector-class-two: image;
+
+.@{selector-class-two} {
+    background: url("@{path}nature4.jpg");
+    border: 5px dotted @div-color;
+    background-size: cover;
+    background-position:right;
+}

@@ -1,0 +1,21 @@
+.className {
+  color: red;
+}
+#idName {
+  color: blue;
+}
+.mixin-class {
+  color: red;
+}
+#mixin-id {
+  color: blue;
+}
+.mixin-class-yellow {
+  color: yellow;
+}
+.link-active {
+  color: red;
+}
+.link-active:hover {
+  color: blue;
+}

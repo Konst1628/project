@@ -1,0 +1,23 @@
+/*ul {
+    background-color: rgb(31, 86, 16);
+    li{
+        list-style: none;
+        a {
+            color: aqua;
+        }
+    }
+}
+*/
+
+.menu-list {
+    background-color: rgb(31, 86, 16);
+    &__item {
+        list-style: none;
+    }
+    &__link {
+        color: aqua;
+        &:hover {
+            color: rgb(13, 0, 255);
+        }
+    }
+}

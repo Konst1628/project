@@ -1,0 +1,6 @@
+@size-ceil:ceil(1.3);
+@size-floor:(2.8);
+@size-rnd:(2.15, 1);
+div {
+font-size:percentage(max(@size-ceil, @size-floor, @size-rnd));
+}
