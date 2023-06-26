@@ -51,17 +51,69 @@ console.log(sum);*/
 
     for (let i=1; i<=20; i++) {
         if (i % 2==0)/*четные*/ /*(i % 2!=0) нечетные
-        { console.log(i);}
-    }*/
+{ console.log(i);}
+}
 
-let N=100;
+let N = 100;
 let sum = 0;
-for (let i=1; 1<=N; i++) {
-    if (i % 2==0) {
-        sum +=i
-    }
+for (let i = 1; i <= N; i++) {
+if (i % 2 == 0) {
+sum += i
+}
 }
 console.log(sum);
 
+let N = 100;
+let i = 1;
+let sum=0;
+while (i <= N)
+{
+if (i % 2 == 0) {
+sum += i
+}
+i++;
+}
+console.log(sum);
 
-  
+let num = 5;
+let multiplication;
+for (let i = 1; i <= 10; i++) {
+multiplication = num * i; 
+console.log(multiplication);
+}
+
+
+
+
+let task;
+do {
+task = prompt('Введите число больше 100', '');
+} while (task <= 100);
+
+var sum = 0;
+while (true) {
+    var value = +prompt("Введите число", '');
+    if (!value) {
+        break;
+    }
+    sum += value;
+}
+alert('Сумма:' + sum);*/
+
+
+
+let n =+prompt("Введите число");
+let isPrime = true; //булевская переменная, которая отвечает за критерий простоты числа
+
+for(let i=2; i<n; i++) {
+    if(n % i==0) {
+        isPrime = false;
+        break;
+    }
+}
+if(isPrime) {
+    console.log(n, "- Простое число");
+}
+else {
+    console.log(n,"- Составное число");
+}
