@@ -98,7 +98,7 @@ while (true) {
     }
     sum += value;
 }
-alert('Сумма:' + sum);*/
+alert('Сумма:' + sum);
 
 
 
@@ -116,4 +116,47 @@ if(isPrime) {
 }
 else {
     console.log(n,"- Составное число");
+}
+
+
+let sum=0;
+debugger;
+for(let i=1; i<=10; i++) {
+    if(i % 2==0) {
+        continue;
+    }
+    sum=sum+i;
+}
+console.log(sum);
+
+var i = 0;
+var n=0;
+debugger;
+while (i<5) {
+    i++;
+    if (i==3) {
+        continue;
+    }
+    n+=i;
+    console.log("n", n);
+    console.log("i", i);
+}
+
+var sum =0;
+debugger;
+for(i=1; i<=2; i++) {
+    for(j=0; j<=3; j++) {
+        sum=sum+i*2+j;
+    }
+}
+console.log(sum);*/
+
+
+//debugger;
+for(i=1; i<=10; i++) {
+    for(j=1; j<=10; j++) {
+        mult = `${i} * ${j}=${i*j}`;
+        console.log(mult);
+    }
+    console.log("////////////////");
 }
