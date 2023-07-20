@@ -46,6 +46,8 @@ arr.splice(3,0,"a","b","c")
 alert(arr);
 */
 //6
-let arr= ["1","2","3","4","5"];
-arr.splice(0,1,"a","b",6,0,"c",8,0,"e")
-alert(arr); // не правильно
+let newMas= ["1","2","3","4","5"];
+newMas.splice(1,0,'a','b');
+newMas.splice(6,0,'c');
+newMas.splice(8,0,'e',);
+alert(newMas);
