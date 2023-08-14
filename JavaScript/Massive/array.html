@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--   <script>
+        Array.isArray([]);
+        Array.isArray([1]);
+        Array.isArray(new Array());
+        Array.isArray({});
+        Array.isArray(null);
+        Array.isArray(undefined);
+        Array.isArray(17);
+        Array.isArray("Array");
+    </script> 
+
+
+<script>
+    const array1= [1,30,39,29,10,13];
+    const isBelow = currentValue=> currentValue < 40;
+    console.log(array1.every(isBelow));
+</script>
+
+
+<script>
+const array = [1,2,3,4,5];
+const even = (element) => element % 2 ===0;
+console.log(array.some(even)); 
+</script>
+
+
+<script>
+ const array1 = [1,2,3,4,5];
+    const isBelow = currentValue=> currentValue >=0;
+    console.log(array1.every(isBelow));
+</script>
+
+<script>
+const array = [-1,2,-3,4,5];
+const even = (element) => element<0;
+console.log(array.some(even)); 
+</script>
+
+<script>
+let myAwesomeArray = [1,2,3,4,5];
+let res = myAwesomeArray.reduce((total,value) => total*value)
+//1*2*3*4*5 reduceRight(справа на лево)
+console.log(res);
+</script>
+
+<script>
+    let arraySum = [1,2,3,4,5];
+let res = arraySum.reduce((total,value) => total+value)
+console.log(res)
+</script>
+
+    <script>
+        let array = [3, 14, 0, 1, 2, 7];
+        let isNull = false;
+        let sum = array.reduce((sum, item) => {
+            if (item == 0) {
+                isNull = true;
+            }
+            if (!isNull) {//isNull == false
+                return sum + item;
+            }
+            else {
+                return sum;
+            }
+        });
+        console.log(sum);
+    </script>
+
+
+<script>
+const array1 = [1,2,3,4];
+console.log(array1.fill(0,2,4)); //[1,2,0,0]
+console.log(array1.fill(5,1)); //[1,5,5,5]
+console.log(array1.fill(6)); //[6,6,6,6]
+let arr2=new Array(10);
+console.log(arr2[0]);
+console.log(arr2.length);
+let arr= new Array(10).fill().map((item,index) => index);
+</script>
+
+<script>
+    let items = [[1,2],[3,4],[5,6]];
+    console.log(items[0][0]); //1
+    console.log(items[0][1]); //2
+    console.log(items[1][0]); //3
+    console.log(items[1][1]); //4
+    console.log(items);
+</script>
+
+
+    <script>
+        let studentsData = [['Андрей', 24], ['Настя', 23],];
+        studentsData.push(['Даня', 24]);
+        console.log(studentsData);
+        //Вывод:  [['Андрей',24], ['Настя',23],['Даня',24]
+
+        let studentsDataNew = [['Андрей', 24], ['Настя', 23],]
+        studentsDataNew[1].push('привет');
+        console.log(studentsDataNew);
+//Вывод:  [['Андрей',24], ['Настя',23],"привет"]]
+
+    </script>
+
+<script>
+    let studentsData = [['Андрей', 24], ['Настя', 23,"привет"],];
+    // проходим по элементам "внешнего" массива
+    for (let i=0; i<studentsData.length; i++){
+        //вычисляем длину "внутреннего" массива
+        let innerArrayLength = studentsData[i].length;
+//проходим по элементам "внутреннего" массива
+        for(let j=0; j<innerArrayLength; j++) {
+            console.log(studentsData[i][j]);
+        }
+    }
+</script>
+
+
+<script>
+   let studentsData2 = [['Андрей', 24], ['Настя', 23],];
+    for (let i of studentsData2){
+        for(let j of i) {
+            console.log(j);
+        }
+    }
+</script>
+
+
+<script>
+    let studentsData = [['Андрей', 24], ['Настя', 23],];
+    // перебираем элементы массива studentsData
+    studentsData.forEach((student) => {
+        student.forEach((data) => {
+            console.log(data);
+        });
+    });
+        
+ </script>
+-->
+<script>
+    let studentsData = [['Андрей', 24], ['Настя', 23],];
+    let newArray = studentsData.flat();
+    console.log(newArray);
+</script>
+
+</body>
+</html>
