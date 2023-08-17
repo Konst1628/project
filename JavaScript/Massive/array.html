@@ -146,12 +146,61 @@ let arr= new Array(10).fill().map((item,index) => index);
     });
         
  </script>
--->
+
 <script>
     let studentsData = [['Андрей', 24], ['Настя', 23],];
     let newArray = studentsData.flat();
     console.log(newArray);
 </script>
+
+<script>
+    const arr=Array.from('дока');
+    console.log(arr); //['д'о''к'а']
+
+</script>
+
+<script>
+   let array= [1,1,2,3];
+   let setCollection= new Set(array);
+   array= Array.from(setCollection);
+   console.log(array);
+</script>
+
+
+<script>
+const uniquelds = new Set();
+uniquelds.add(123);
+uniquelds.add(456);
+uniquelds.add(111);
+uniquelds.add(123);
+console.log(uniquelds.size); //3
+console.log(uniquelds.has(111)); // true
+uniquelds.delete(111);
+console.log(uniquelds.size); //2
+uniquelds.clear();
+console.log(uniquelds.size);//0
+ </script>
+-->
+
+
+<script>
+let recipeMap = new Map([["огурец", 500],["помидор", 350],["лук",50]]);
+//перебор по ключам(овощи)
+for (let vegetable of recipeMap.keys()){
+    alert(vegetable); //огурец помидор лук
+}
+
+//перебор по значениям(числа)
+for (let amount of recipeMap.values()){
+    alert(amount); //500 350 50
+}
+//перебор по элементам в формате [ключ,значение]
+for (let entry of recipeMap){
+    //тоже самое, что и recipeMap.entries()
+    alert(entry); //огурец 500 ( и так далее)
+}
+</script>
+
 
 </body>
 </html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+<!--
+    <script>
+        //task 1 
+
+         let array = [1,-9,8,7,-15];
+         let sumPos = 0;
+         let sumNeg=0;
+         let positive = array.filter(item => item>0).map(item=>sumPos+=item);
+         let negative = array.filter(item => item<0).map(item=>sumNeg+=item);
+         let comprarison = sumPos>Math.abs(sumNeg) ? sumPos : sumNeg;
+         console.log(comprarison);
+    </script>
+ 
+    <script>
+        //task 2
+        var array = [1,4,5,0,7,0];
+const array2 = array.filter(element=>element !==0);
+console.log(array2); 
+    </script>
+
+    <script>
+        //task 3 
+        let arr = [1,4,5,0,7,0];
+        let max = 0;
+for (let i of arr) {
+  if (max > arr[i]){
+    max = arr[i];
+  }
+}
+  console.log(max);
+    </script>
+
+<script>
+    //task 4
+const array = [1,4,5,9,7,20],
+      minIndex = array.indexOf(Math.min(...array)),
+      maxIndex = array.indexOf(Math.max(...array));
+ 
+[array[minIndex], array[maxIndex]] = [array[maxIndex], array[minIndex]]
+console.log(array)
+</script>
+
+
+<script>
+    //task 4
+let arr = [1,4,5,0,7,8];
+let max = 0, min = 0;
+let maxInd, minInd;
+for(let i=0; i < arr.length; i++) 
+{
+    if(arr[i]>=max) {
+        max = arr[i];
+        maxInd = i;
+    }
+    if(arr[i]<=min) {
+        min = arr[i];
+        minInd = i;
+    }
+}
+arr[maxInd] = min;
+arr[minInd] =max;
+console.log(arr)
+</script>
+
+
+
+<script>
+    let arr = [1,4,5,0,7,8];
+    for(let i =1; i < arr.length; i++) {
+        arr[i]>arr[i-1] ? 
+        console.log(arr[i]): "";
+    }
+    /*if(arr[i]>arr[i-1]) {
+        console.log(arr[i]);
+    }*/
+</script>-->
+
+<script>
+    let mas = [11,45,88,9,0];
+    let N=2, M=50;
+    let filt = mas.filter(item=>(item>N&&item<M)).map(item=>console.log(item));
+    
+   
+</script>
+
+
+</body>
+
+</html>
