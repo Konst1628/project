@@ -86,15 +86,41 @@ console.log(arr)
     /*if(arr[i]>arr[i-1]) {
         console.log(arr[i]);
     }*/
-</script>-->
+</script>
 
 <script>
     let mas = [11,45,88,9,0];
-    let N=2, M=50;
-    let filt = mas.filter(item=>(item>N&&item<M)).map(item=>console.log(item));
-    
-   
+    let temp =[]
+    let max = -Infinity;
+   mas.forEach(item => {
+       temp.push(String(item).split('').reduce((a,b)=>parseInt(a)+parseInt(b)));
+       })
+       for(let i=0; i<temp.length; i++) {
+           if(temp[i]>= max) {
+               max = temp[i];
+               maxInd=i;
+           }
+       }
+       console.log(mas[maxInd],max)
 </script>
+-->
+
+
+<script>
+let array = [1,7,4,2,-9,8];
+array = array.map((item,index)=>
+item = index%2 !=0 ? 0:item)
+console.log(array);
+
+//тоже самое 
+for(let i=0; i<array.length; i++) {
+    if(i % 2 !=0) { 
+        array[i] = 0 
+    }
+}
+console.log(array);
+</script>
+
 
 
 </body>
