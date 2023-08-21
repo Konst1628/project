@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!--
+  <script>
+//Дано предложение. Вывести слова в преложение в порядке убывания.
+let str = "мама мыла раму";
+console.log(str.split('').reverse().join(''));
+    </script>
+
+    <script>
+        //Дана строка. Подсчитать кол-во цифр в строке
+        let str = "Сегодня 1 был хороший 2 день";
+        let mas = str.split(" ");
+        let counter=0;
+        for (let i = 0; i < mas.length; i++) {
+             
+            if (!isNaN (mas[i]/1)) 
+            {counter++;}
+        }
+        console.log(counter);
+    </script>
+
+    <script>
+        //Определить количетсво одинаковых символов 
+        let str = "водоворотоподобно";
+        let array = str.split('');
+        let set = new Set(array);
+        let newStr = Array.from(set).join('');
+        // console.log(str.length); 
+        // console.log(newStr.length);
+        console.log (str.length-newStr.length);
+    </script>
+--> 
+    <script>
+        // Даны 2 слова. Удалить из обоих слов буквы которые встречаются в обоих словах.
+        
+        let firstWord = "Мама";
+        let secondWord = "Папа";
+        let firstWordNew = firstWord.toLowerCase().split("").filter(item=> !secondWord.includes(item)).join("");
+        let secondWordNew = secondWord.toLowerCase().split("").filter(item=> !firstWord.includes(item)).join("");
+  console.log(firstWordNew, secondWordNew);
+
+    </script>
+</body>
+</html>
+
+    </script>
+</body>
+</html>
