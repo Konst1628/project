@@ -37,7 +37,7 @@ console.log(str.split('').reverse().join(''));
         // console.log(newStr.length);
         console.log (str.length-newStr.length);
     </script>
---> 
+
     <script>
         // Даны 2 слова. Удалить из обоих слов буквы которые встречаются в обоих словах.
         
@@ -48,9 +48,19 @@ console.log(str.split('').reverse().join(''));
   console.log(firstWordNew, secondWordNew);
 
     </script>
-</body>
-</html>
+--> 
+    <script>
+        let sentence = "Мама   мыла   раму";
+        console.log(sentence);
+     /*  sentence = sentence.split("").filter((letter, i, array)=>
+        letter == " " && array[i+1] == " "? "": " ").join(""); 
+        console.log(sentence); */
 
+        sentence = sentence.split(" ");
+        console.log(sentence);
+        sentence=sentence.filter(item=>item).join(' ');
+        console.log(sentence);
     </script>
+
 </body>
 </html>
