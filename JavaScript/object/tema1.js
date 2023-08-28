@@ -164,7 +164,7 @@ user.name= "Вася";
 console.log(user.name);//Вася
 
 user={surname:"Сидоров"}; //Ошибка
-*/
+
 
 const catVasya= {
     name:'Вася',
@@ -176,3 +176,117 @@ const catVasya= {
     }
 };
 catVasya.mew();//вызов метода
+
+
+const catVasya = {
+    name: 'Вася',
+    age:2,
+    color: 'рыжий',
+    weight:3,
+    mew:function(){
+        console.log('мяу-мяу');
+    },
+    sayName(){
+        console.log('Привет, я кот' +this.name);
+    }
+};
+catVasya.sayName()
+
+
+
+const catVasya = {
+    name: 'Вася',
+    age:2,
+    color: 'рыжий',
+    weight:3,
+    mew:function(){
+        console.log('мяу-мяу');
+    },
+    sayName(){
+        console.log('Привет, мне ' +this.age);
+        console.log('Привет, я ' +this.color);
+        console.log('Привет, мой ' +this.weight);
+    }
+};
+catVasya.sayName()
+
+let person = {
+    name: "John",
+    age:30,
+    city: "New York",
+    phone:"123-456-7890"
+};
+function showPersonInfo(person) {
+    console.log("Name:" +person.name);
+    console.log("Age:" +person.age);
+    console.log("City:" +person.city);
+    console.log("Phone:" +person.phone);
+}
+showPersonInfo(person);
+
+
+let person = {
+    name: "John",
+    age: 30,
+    city: "New York",
+    phone: "123-456-7890",
+
+    sayInfo() {
+        console.log("Name:" + this.name);
+        console.log("Age:" + this.age);
+        console.log("City:" + this.city);
+        console.log("Phone:" + this.phone);
+    }
+};
+person.sayInfo();
+
+let people= [
+    {name: "John", age:30},
+    {name: "Bob", age:25},
+    {name: "Alice", age:28},
+];
+
+function getNames(people){
+    let result= [];
+    for (let i=0; i<people.length; i++){
+        if (people[i].age>25) {
+            result.push(people[i].name);
+        }
+    }
+    return result;
+}
+console.log(getNames(people));
+*/
+
+let people= [
+    {name: "John", age:30},
+    {name: "Bob", age:25},
+    {name: "Alice", age:28},
+];
+
+function getNames(people){
+    let result= [];
+    for (let i=0; i<people.length; i++){
+        if (people[i].age>25) {
+            result.push(people[i].name);
+        }
+    }
+    return result;
+}
+console.log(people.length);
+
+
+function User(name) {
+    this.name = name;
+    this.sayHi= function() {
+        alert( "Меня зовут:" +this.name);
+    };
+}
+let john = new User("John");
+john.sayHi();// Меня зовут John
+
+let anya = new User("Anya");
+anya.sayHi();// Меня зовут Anya
+
+let masha = new User("Masha");
+masha.sayHi();// Меня зовут Masha
