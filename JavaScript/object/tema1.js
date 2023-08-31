@@ -256,7 +256,7 @@ function getNames(people){
     return result;
 }
 console.log(getNames(people));
-*/
+
 
 let people= [
     {name: "John", age:30},
@@ -290,3 +290,112 @@ anya.sayHi();// Меня зовут Anya
 
 let masha = new User("Masha");
 masha.sayHi();// Меня зовут Masha
+
+let book= [
+    {name: "Богатый папа, бедный папа"},
+    {author: "Роберт Кийосаки"},
+    {pages: "330"},
+];
+
+function getNames(people){
+    let result= [];
+    for (let i=0; i<people.length; i++){
+        if (people[i].age>25) {
+            result.push(people[i].name);
+        }
+    }
+    return result;
+}
+console.log(people.length);
+
+
+let book = {
+    name: "Богатый папа, бедный папа",
+    author: "Роберт Кийосаки",
+    pages: "330",
+
+    sayInfo() {
+        console.log("Name:" + this.name);
+        console.log("Author:" + this.author);
+        console.log("Pages:" + this.pages);
+    }
+};
+book.sayInfo();
+
+*/
+
+/*----------------------*/
+/*
+let people= [
+    {name: "John", age:30},
+    {name: "Bob", age:21},
+    {name: "Alice", age:19},
+];
+
+function getBob(people){
+    let result= {};
+    for (let i=0; i<people.length; i++){
+        if (people[i].name=="Bob") {
+            result = Object.assign({}, people[i]);
+        }
+    }
+    return result;
+}
+
+let p = people.filter(person=>person.name=="Bob");
+console.log(p);
+console.log(getBob(people));
+*/
+/*----------------*/
+/*
+let people= [
+    {name: "John", age:30},
+    {name: "Bob", age:21},
+    {name: "Anna", age:19},
+];
+function getWithoutAnna(people){
+ 
+    for (let i=0; i<people.length; i++){
+        if (people[i].name=="Anna") {
+        people.splice(i,1);
+        }
+    }
+  /*return people;}*/
+/*
+getWithoutAnna(people);
+console.log(people);
+console.log(people.filter(person=>person.name!=='Anna'));
+
+----------------
+let people= [
+    {name: "John", age:30},
+    {name: "Bob", age:25},
+    {name: "Anna", age:18},
+];
+
+people.sort((a, b) => {
+    return a.age - b.age;
+})
+    console.log(people)
+
+/*people.sort(function(age);*/
+
+var litmir = [
+    {author:'Хэленка', title:'Улетела сказка'},
+    {author:'Коул Кресли', title:'Восстание Аркан'},
+    {author:'Райчел Мид', title:'Золотая лилия'}
+];
+propertyValue(litmir, 'title'); // Улетела сказка, Восстание Аркан, Золотая лилия
+propertyValue(litmir,'author'); //Хэленка,Коул,Кресли,Райчел Мид
+
+function propertyValue(array,key){
+ 
+    for (let i=0; i<array.length; i++){
+        let obj = array[i];
+        for(let k in obj) {
+            if(k==key){
+                console.log(obj[k]);
+        }
+    }
+}
+}
