@@ -378,7 +378,7 @@ people.sort((a, b) => {
 })
     console.log(people)
 
-/*people.sort(function(age);*/
+/*people.sort(function(age);
 
 var litmir = [
     {author:'Хэленка', title:'Улетела сказка'},
@@ -399,3 +399,204 @@ function propertyValue(array,key){
     }
 }
 }
+
+const userData = {
+    name: "John",
+    age: 25,
+    isOnline: true
+}
+console.log(Object.values(userData)); //возвращает ["John",25,true]
+
+const userData = {
+    name: "John",
+    age: 25,
+    isOnline: true
+}
+console.log(Object.entries(userData)); //возвращает [["name","John",["age",25],["isOnline",true]]
+
+const person = {
+    name: "James",
+    age: 28,
+    available: false
+}
+console.log(Object.keys(person));
+//возвращает:["name",age available]
+
+const person = {
+    name: "Alex",
+    age: 35,
+    available: true
+}
+//Заморозка объекта
+Object.freeze(person);
+console.log(person);
+
+const userData = {
+    name: "Brad",
+    age: 28,
+    isOnline: false}
+    Object.seal(userData);
+    console.log(userData);
+
+    //определяет, одинаковы ли два значения
+
+   console.log(Object.is(50,50)); //истинно
+   console.log(Object.is('foo','bar')); //ложно
+   console.log(Object.is(foo,foo)); //истинно
+
+
+   //сравнение объектов
+
+//создается 1 объект
+const book={title:'Дюна'}
+//создается другой объект
+const anotherBook={title:'Дюна'}
+console.log(book===anotherBook) //false
+console.log(Object.is(book,anotherBook));
+
+
+//создается 1 объект
+const book={title:'Дюна'}
+// в anotherBook записывается ссылка на объект
+const anotherBook=book
+console.log(book===anotherBook) //true
+console.log(Object.is(book,anotherBook));
+
+
+let user = {name:"John",
+sizes:{height:182,
+width:50
+}
+};
+let clone=Object.assign({},user);
+console.log(user);
+console.log(clone);
+user.name="Lena";
+console.log(user.name);
+console.log(clone.name);
+user.sizes.height=200;
+console.log(user.sizes.height);
+console.log(clone.sizes.height);
+
+// глубокое клонирование
+let objects = 
+{name:"John",
+sizes:{height:182,
+width:50
+}
+};
+let deep=structuredClone(objects);
+console.log(objects.sizes.height);
+console.log(deep.sizes.hight);
+
+objects.sizes.height=183;
+
+console.log(objects.sizes.height);
+console.log(deep.sizes.hight);
+
+deep.sizes.height=184;
+
+console.log(objects.sizes.height);
+console.log(deep.sizes.heihgt);
+
+
+let user={};
+//alert(user.ddress.street);// Ошибка!
+alert(user?.address?.street); // undefined(без ошибки)
+
+let userAdmin={
+    admin(){
+        alert("Я админ");
+    }
+};
+let userGuest={};
+userAdmin.admin?.();// Я админ
+userGuest.admin?.()//ничего не произойдет (такого метода нет)
+
+
+let key="firstName";
+let user1={firstName:"John"};
+let user2=null;
+alert(user1?.[key]); //John
+alert(user2?.[key]); //undefined
+
+
+function User(name) {
+    this.name=name;
+    this.sayHi = function() {
+        alert("Меня зовут:" + this.name);};
+    }
+    let john = new User("John");
+john.sayHi(); 
+
+    let anya = new User("Anya");
+    anya.sayHi();// Меня зовут:Anya
+
+    let john2 = {
+        name: "John",
+        sayHi() {
+        alert("Меня зовут:" + this.name);
+        }
+    }
+let anna= {
+            name: "Anna",
+            sayHi() {
+            alert("Меня зовут:" + this.name);
+            }
+        }
+john2.sayHi();
+            anna.sayHi();
+
+
+
+            function Hero(name="Герой"){
+                this.name=name;
+                //this.name=name||"Герой";
+            }
+
+            let Ivan = new Hero("Иван");
+            let Hto_to= new Hero();
+
+            alert(Ivan.name); // Иван 
+            alert(Hto_to.name); // Герой
+
+
+            function myCar(name) {
+                this.name=name;
+                this.make = function() {
+                  };
+                }
+            newCar.make(); 
+
+
+            let newCar = {
+                make: "Eagle",
+                model: "Talon TSi",
+                year: "1993",
+
+                make() {
+                console.log("myCar" + this.name);
+                }
+            }
+*/
+
+          /*  function Car(make,model,year) {
+                this.make=make;
+                this.model=model;
+                this.year=year
+                    console.log(mycar.make);
+                }
+*/
+                let newCar = {
+                    make: "Eagle",
+                    model: "Talon TSi",
+                    year: "1993",
+    
+                    metode() {
+                    console.log(this.make,this.model,this.year);
+                    }
+                }
+                newCar.metode(); 
+
+                let myCar = new Car("Eagle", "Talon TSi","1993");
+          
