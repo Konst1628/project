@@ -578,25 +578,153 @@ john2.sayHi();
                 console.log("myCar" + this.name);
                 }
             }
-*/
 
-          /*  function Car(make,model,year) {
+/*
+           function Car(make,model,year) {
                 this.make=make;
                 this.model=model;
                 this.year=year
                     console.log(mycar.make);
                 }
-*/
-                let newCar = {
+
+              let newCar = {
                     make: "Eagle",
                     model: "Talon TSi",
-                    year: "1993",
-    
-                    metode() {
-                    console.log(this.make,this.model,this.year);
-                    }
-                }
-                newCar.metode(); 
+                    year: "1993",*/
+/*      
+      function Car(make,model, year) {
+          this.make=make;
+          this.model =model;
+          this.year=year;
+      }
 
-                let myCar = new Car("Eagle", "Talon TSi","1993");
-          
+  let newCar = new Car("Eagle", "Talon TSi","1993");
+  console.log(newCar.model)//make,year//);
+
+function Calculator(a,b){
+this.a=a,
+this.b=b,
+this.add=function(){
+return this.a+this.b;
+},
+this.sub=function(){
+return this.a-this.b;
+},
+this.mul=function(){
+return this.a*this.b;
+},
+this.div=function(){
+return this.a/this.b;
+},
+this.degree=function(){
+return this.a**this.b;
+}
+}
+let calculator = new Calculator(11,5);
+console.log(calculator);
+
+console.log(calculator.add());
+console.log(calculator.sub());
+console.log(calculator.mul());
+console.log(calculator.div());
+console.log(calculator.degree());
+
+function Calculator(a,b){
+this.a=a,
+this.b=b,
+this.add=()=>this.a+this.b,
+this.sub=()=>this.a-this.b,
+this.mul=()=>this.a*this.b,
+this.div=()=>this.a/this.b};
+ 
+let calculator=new Calculator(11,5);
+
+console.log(calculator.add());
+console.log(calculator.sub());
+console.log(calculator.mul());
+console.log(calculator.div());   
+
+
+function Calculator(){
+this.add=function(a,b) {
+return a+b;
+}
+this.sub=function(a,b) {
+return a-b;
+}
+this.mul=function(a,b) {
+return a*b;
+}
+this.div=function(a,b) {
+return a/b;
+}
+}
+let calculator=new Calculator();
+ 
+console.log(calculator.add(12,2));
+console.log(calculator.sub(9,5));
+console.log(calculator.mul(10,9));
+console.log(calculator.div(5,1));
+
+
+//Стрелочная функция//
+function Calculator(){
+this.add=(a,b)=>a+b;
+this.sub=(a,b)=>a-b;
+this.mul=(a,b)=>a*b;
+this.div=(a,b)=>a/b;
+}
+ 
+let calculator=new Calculator();
+ 
+console.log(calculator.add(12,2));
+console.log(calculator.sub(9,5));
+console.log(calculator.mul(10,9));
+console.log(calculator.div(5,1));
+
+//Свойство объект//
+
+let newAuthor = {
+    name: "Сергей",
+    surname: "Петров"
+};
+let book = {
+    "main title": "Новая книга",
+    author: newAuthor
+}
+
+console.log(book.author);
+console.log(book.author.name);
+*/
+
+function Person(name,age,sex) {
+    this.name=name;
+    this.age=age;
+    this.sex=sex;
+}
+let rand=new Person("Rand McKinnon",33,"M");
+let ken=new Person("Ken Jones",39,"M");
+console.log(rand.name,rand.age,rand.sex);
+
+function Car(make,model,year,owner) {
+    this.make=make;
+    this.model=model;
+    this.year=year;
+    this.owner=owner;
+    this.displayCar=displayCar;
+}
+var car1=new Car("Eagle","Talon Tsi",1993,rand);
+var car2 =new Car("Nissan","300ZX",1992,ken);
+
+console.log(car2.owner);
+console.log(car2.owner.name);
+
+function displayCar(){
+    let result= "A Beautiful " + this.year + " " +
+    this.make + " " + this.model;
+    console.log(result);
+}
+
+
+car1.displayCar();
+car2.displayCar();
