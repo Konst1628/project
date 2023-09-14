@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div-01">Here is div-01</div>
+    <div id="div-02">Here is div-02</div>
+    <ul>
+        <li>This is a list item</li>
+        <li>This is another list item</li>
+    </ul>
+    <div id="div-03">Here is div-03</div>
+    <div id="div-04">Here is div-04</div>
+    <script>
+        let previous=document.getElementById("div-03").previousElementSibiling;
+        console.log(previous);
+
+        let next=document.getElementById("div-03").nextElementSibling;
+        console.log(next);
+
+        let parent=document.querySelector('li').parentElement;
+        console.log(parent);
+
+        let first=document.querySelector('ul').firstElementChild;
+        console.log(first);
+
+        let last=document.querySelector('ul').lastElementChild;
+        console.log(last);
+
+        let children=document.querySelector('ul').children;
+        console.log(children);
+    </script>
+
+<ol id="ol">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+</ol>
+<script>
+ol.before('bedore') //вставить строку "bedore" перед <ol>
+ol.after('after'); //вставить строку "after"  после <ol>
+let liFirst = document.createElement('li');
+liFirst.innerHTML='prepend';
+ol.prepend(liFirst); // вставить liFirst в начало <ol>
+let liLast= document.createElement('li');
+liLast.innerHTML='append';
+ol.append(liLast); //вставить liLast в конец <ol>
+
+//console.log(document.body.outerHTML);
+</script>
+
+
+</body>
+</html>

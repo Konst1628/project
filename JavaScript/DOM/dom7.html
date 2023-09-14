@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body data-about="Elephants">
+    
+
+<div>
+    <p id="one" class="events">Первый</p>
+    <p id="two" class="events">Второй</p>
+    <p id="three" class="events">Третий</p>
+</div>
+<script>
+console.log(document.body.dataset.about); // Elephants
+    var list=document.getElementsByClassName("events");
+    for (var i = 0; i<list.length; i++) {
+        console.log(list[i]);
+        console.log(list[i].id);
+    }
+</script>
+
+</body>
+</html>

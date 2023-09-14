@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div"></div>
+
+<script>let div = document.querySelector('div');
+div.insertAdjacentHTML('beforebegin',
+'<p>Привет</p>');
+div.insertAdjacentHTML('afterend',
+'<p>Пока</p>')
+</script>
+
+<ul id="birds">
+    <li>Orange-winged parrot</li>
+    <li class="endangered">Philippine eagle</li>
+    <li>Great white pelican</li>
+</ul>
+<script>
+const birds = document.querySelectorAll("hi");
+
+for(const bird of birds) {
+    if (bird.matches(".endangered")) {
+        console.log(`The ${bird.textContent} is endangered!`);
+    } 
+}
+</script>
+
+<div class="contents">
+    <ul class="book">
+        <li class="chapter">Глава 1</li>
+        <li class="chapter">Глава 2</li>
+    </ul>
+</div>
+
+<script>
+    let chapter=document.querySelector('.chapter');// LI
+    console.log(chapter.closest('.book')); //UL
+    console.log(chapter.closest('.contents')); // DIV
+</script>
+
+</body>
+</html>
