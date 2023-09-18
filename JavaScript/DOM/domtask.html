@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="hello"> Hello</div>
+
+<script>
+    const hello = document.getElementById("hello");
+ hello.textContent = "Hello World";
+
+    
+</script>
+
+
+<p>Какой-то текст</p>
+
+<script>
+let p = document.createElement('p');
+p.innerHTML='Этот текст был создан динамически';
+let div = document.querySelector('div');
+div.prepend(p); 
+</script>
+
+
+<div class="backgr">Фоновый цвет</div>
+<div class="backgr2">Фоновый цвет</div>
+<script>
+    let text=document.querySelector(".backgr");
+    text.style.background="#c0c0c0";
+</script>
+</body>
+</html>
