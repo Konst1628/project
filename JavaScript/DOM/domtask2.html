@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <div>Users:</div>
     <ul>
@@ -13,44 +15,76 @@
         <li>Pit</li>
     </ul>
 
-<script>
-    let div = document.querySelector('div');
-    console.log(div);
-    let ul = document.querySelector('ul');
-    console.log(ul);
-    let last = document.querySelector('ul').lastElementChild;
-    console.log(last);
-</script>
+    <script>
+        let div = document.querySelector('div');
+        console.log(div);
+        let ul = document.querySelector('ul');
+        console.log(ul);
+        let last = document.querySelector('ul').lastElementChild;
+        console.log(last);
+    </script>
 
-<!--Необходимо получить все элементы li 
+    <!--Необходимо получить все элементы li 
     на страницу и добавить к каждому из них класс "list-item" -->
-<div>
-    <ol>
-        <li>пункт</li>
-        <li>пункт</li>
-    </ol>
-</div>
-<script>
-    let lis=document.querySelectorAll('li');
-    for(let i=0; i<lis.length; i++) {
-        lis[i].classList.add('list-item');
-        console.log(lis[i]);
-    }
-</script>
-<!--Получите все элементы "а" на странцие и добавьте к каждмому
+    <div>
+        <ol>
+            <li>пункт</li>
+            <li>пункт</li>
+        </ol>
+    </div>
+    <script>
+        let lis = document.querySelectorAll('li');
+        for (let i = 0; i < lis.length; i++) {
+            lis[i].classList.add('list-item');
+            console.log(lis[i]);
+        }
+    </script>
+    <!--Получите все элементы "а" на странцие и добавьте к каждмому
 из них атрибут "target=_blank"-->
 
 
-<p><a>Элементы</a></p>
+    <p><a>Элементы</a></p>
 
-<script>
-    let target = document.querySelector('a');
-    for(let i=0; i<target.length; i++) {
-        target[i].setAttribute('target', '_blank');
-        console.log(target[i]);
-    }
-    
-</script>
+    <script>
+        let target = document.querySelector('a');
+        for (let i = 0; i < target.length; i++) {
+            target[i].setAttribute('target', '_blank');
+            console.log(target[i]);
+        }
+
+    </script>
+
+    <!--Необходимо получить все элементы с классом "example-class"
+ и установить им высоту равную 100 пикселей-->
+
+    <div class="example-class">Элементы1</div>
+    <div class="example-class">Элементы2</div>
+    <div class="example-class">Элементы3</div>
+
+    <script>
+        let example = document.querySelectorAll('.example-class');
+        for (let i = 0; i < example.length; i++) {
+            example[i].style.height = "100px";
+            console.log(example[i]);
+        }
+    </script>
+
+    <!--Необходимо получить все элементы на странице
+     и вывести их количество в консоль-->
+    <div class="all-class">Элементы1</div>
+    <div class="all-class">Элементы2</div>
+    <div class="all-class">Элементы3</div>
+
+    <script>
+        let all = document.getElementsByTagName('*');
+        for (let i = 0; i < all.length; i++) {
+            console.log(all[i]);
+        }
+        console.log(`${all.length}, количество всех элементов на странице`)
+    </script>
+
+
+
 </body>
 
 </html>
