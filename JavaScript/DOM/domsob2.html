@@ -100,5 +100,17 @@ form.addEventListener("blur", () => text2.style.background = "blue")
         }
 </script>
 
+
+<input type="button" value="Нажми меня!!!" id="elem5">
+
+<script>
+    elem5.onclick=function(event){
+        console.log(event.type+ "на" + event.currentTarget);
+        console.log("Координаты:" + event.clientX+":" + event.clientY);
+        console.log(event);
+    };
+    
+</script>
+
 </body>
 </html>
