@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input value="Click me" onclick="alert('Click!')" type="button">
+
+<script>
+    function countRabbits() {
+        for(let i=1; i<=3; i++) {
+            console.log("Rabbir number" +i);
+        }
+    }
+</script>
+<input type="button" onclick="countRabbits()"
+value="Считать кроликов!">
+
+
+<!--
+<input id="elem" type="button" value="Click me!">
+<script>
+elem.onclick=function() {
+    console.log('Thank you');
+}
+elem.onclick=function() {
+    console.log('Thank you so much');
+}
+</script>
+-->
+<input id="elem" type="button" value="Click me"/>
+
+<script>
+    function handler1(){
+        console.log('Thank you');
+    };
+    function handler2(){
+        console.log('Thank you so much');
+    }
+    // назначим 3 обработчика
+    elem.onclick=()=>console.log("Hello");
+    elem.addEventListener("click", handler1); // Thank you
+    elem.addEventListener("click", handler2); // Thank you so much
+</script>
+
+
+<input type="button" id="hider" value="Нажмите, чтобы спрятать текст"/>
+
+<div id="text"> Text</div>
+
+<script>
+    document.getElementById('hider').onclick=function(){
+        document.getElementById('text').style.display="none";
+    }
+</script>
+
+
+</body>
+</html>

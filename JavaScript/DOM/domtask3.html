@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="block"></div>
+   
+
+    <script>
+        let div = document.querySelector(".block");
+        let elem = document.createElement('div');
+        elem.className="item";
+        elem.innerHTML = 'Элемент внутри';
+        elem.style.color = "blue";
+        elem.style.background = "#f8f8f8";
+        elem.style.width = "100px";
+        elem.style.border = "3px solid black";
+        elem.style.textAlign = "center";
+        elem.style.padding ="16px";
+        div.append(elem);
+        elem.setAttribute("class","item_1");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  <!--
+    <div class="elem">
+        <img src=photo.png" alt="photo">
+        <div class="content">
+            <h2 class="heading">Lorem, ipsum dolor.</h2>
+            <p class="text"> Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+
+    <script>
+        let p = document.querySelector('.text');
+        console.log(p);
+        let next = document.querySelector('h2').nextElementSibling;
+        console.log(next);
+        let parent = document.querySelector('.content').parentElement;
+        console.log(parent);
+        let img = document.querySelector('img');
+        console.log(img);
+        let parent2 = document.querySelector('.elem').parentElement;
+        console.log(parent2);
+    </script>
+-->
+<div class="item">
+    <div class="elem">
+        <div class="info">
+            <h2 class="subtitle">Lorem, ipsum dolor.</h2>
+        </div>
+    </div>
+</div>
+
+<script>
+    let h2= document.querySelector('h2');
+    let parents=[];
+
+    while(h2.parentElement !=null) {
+        h2=h2.parentElement;
+        parents.push(h2);
+    }
+    console.log(parents);
+</script>
+
+</body>
+
+</html>
