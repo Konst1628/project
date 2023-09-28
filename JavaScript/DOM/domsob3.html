@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="elem">Click me</button>
+
+    <script>
+        elem.addEventListener('click',{
+            handleEvent(event) {
+                console.log(event.type + "на" 
+                + event.currentTarget);
+                console.log(event);
+            }
+        }) // click на [object HTMLButtonElement]
+    </script>
+
+<button id="elem2"> Нажми меня</button>
+
+<script>
+
+    function handleEvent(event) {
+        switch(event.type) {
+            case 'mousedown':
+                elem2.innerHTML = "Нажата кнопка мыши";
+                break;
+                case 'mouseup':
+                    elem2.innerHTML += "...и отжата";
+                    break;
+        }
+    }
+    elem2.addEventListener('mousedown', handleEvent);
+    elem2.addEventListener('mouseup', handleEvent);
+</script>
+
+</body>
+</html>

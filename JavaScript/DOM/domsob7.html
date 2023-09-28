@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,
+        td {
+            border: 1px solid black;
+            text-align: center;
+        }
+        td:nth-child(1) {
+            background-color: gray;
+        }
+        td:nth-child(2) {
+            background-color: red;
+            color: white;
+        }
+        td:nth-child(3) {
+            background-color: yellow;
+        }
+        .highlight {
+            background-color: blue !important;
+        }
+    </style>
+</head>
+<body>
+    <table id="table">
+        <tr>
+            <th colspan="3">Квадрат<em>Bagua</em>: Направление, Элемент, Цвет, Значение</th>
+        </tr>
+        <tr>
+            <td>...<strong>Северо-Запад</strong>...</td>
+            <td>...<strong>Север</strong>...</td>
+            <td>...<strong>Северо-Восток</strong>...</td>
+        </tr>
+        <tr>
+            <td>...<strong>Запад</strong>...</td>
+            <td>...<strong>Центр</strong>...</td>
+            <td>...<strong>Восток</strong>...</td>
+        </tr>
+        <tr>
+            <td>...<strong>Юго-Запад</strong>...</td>
+            <td>...<strong>Юг</strong>...</td>
+            <td>...<strong>Юго-Восток</strong>...</td>
+        </tr>
+    </table>
+
+    <script>
+        let selectedTd;
+
+        table.onclick=function(event) {
+            let target = event.target; //где был клик?
+            console.log(target.tagName)
+            if(target.tagName != 'TD') return; // не на TD? тогда не интересует
+            highlight(target); // подсветить TD
+        };
+
+        function highlight(td) {
+            if (selectedTd) { //убрать существующуб подсветку, если есть 
+            selectedTd.classList.remove('highlight');
+        }
+        selectedTd =td;
+        selectedTd.classList.add('highlight'); //подсветить новый td
+        }
+    </script>
+</body>
+</html>
