@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--
+    <script>
+        document.addEventListener('keydown',
+        function(event) {
+            if (event.code=='KeyZ'&&(event.ctrlKey|| event.metaKey)) {
+                alert('Отменить!')
+            }
+        });
+    </script>
+
+
+<input id="key" type="text" value="Click me">
+<script>
+    key.addEventListener('keydown', function(event) {
+        if (event.code=='Enter') {
+            alert(key.value)
+        }
+    });
+</script>
+
+    <button id="button">кнопка</button>
+    <script>
+        let button = document.querySelector('#button');
+        button.addEventListener('click', () => {
+            alert('message');
+        });
+
+        button.addEventListener('mouseover', () => {
+            let clickEvent = new Event('click');
+            button.dispatchEvent(clickEvent);
+        });
+    </script>
+    -->
+
+
+
+    <button id="button">кнопка</button>
+    <script>
+        let button = document.querySelector('#button');
+        button.addEventListener('showMessage', function () {
+            alert('message');
+        });
+
+        button.addEventListener('mouseover', function () {
+            let showMessageEvent = new Event('showMessage');// создаем событие
+            button.dispatchEvent(showMessageEvent); //вызываем срабатывание события
+
+        });
+    </script>
+    <h1 id="elem"> Привет из кода</h1>
+    <script>
+        document.addEventListener("hello", function (event) {
+            alert("Привет от" + event.target.tagName);
+            console.log(event);
+        });
+        let event = new Event("hello", {
+            bubbles: true
+        });
+        elem.dispatchEvent(event);
+    </script>
+</body>
+
+</html>
