@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1. Имеется 2 поля ввода: первое - название еды, второе - вес. 
+    Также имеются 2 кнопки: Добавить и Сохранить. 
+    И еще есть пустая таблица следующего вида:-->
+
+    <input id="food" placeholder="Название еды">
+    <input id="weight" placeholder="Вес">
+
+    <button id="add">Добавить</button>
+    <button id="save">Сохранить</button>
+
+    <table border="1" id="table">
+        <tr>
+            <th>Название</th>
+            <th>Вес</th>
+            <th>Действия</th>
+        </tr>
+        <tr>
+            <td>Сок</td>
+            <td>200</td>
+            <td>
+                <button class="edit-button">Редактировать</button>
+                <button class="delete-button">Удалить</button>
+            </td>
+        </tr>
+    </table>
+
+    <!--При нажатии кнопки "Добавить" в таблицу добавляется новая строка 
+со структурой аналогичной 2 строке (сок).
+При нажатии кнопки "Удалить" из таблицы удаляется соотвествующая строка.
+При нажатии кнопки "Редактировать" в поля заносятся данные из ячеек 
+таблицы, а затем после нажатия кнопки "Сохранить" 
+перезиписываются данные из полей в ту строку, которая редактируется. -->
+
+    <script>
+
+        add.onclick = function () {
+            let tbody = document.querySelector('tbody');
+            let tr = document.createElement('tr');
+            tbody.appendChild(tr);
+
+            let tdOne = document.createElement('td');
+            tdOne.innerHTML = food.value;
+            tr.append(tdOne);
+
+            let tdTwo = document.createElement('td');
+            tdTwo.innerHTML = weight.value;
+            tr.append(tdTwo);
+
+
+            let tdThree = document.createElement('td');
+            let tdEdit = document.createElement('button');
+            let tdDel = document.createElement('button');
+            tdThree.append(tdEdit);
+            tdThree.append(tdDel);
+
+            tdEdit.innerHTML = document.querySelector('.edit-button').innerHTML;
+            tdDel.innerHTML = document.querySelector('.delete-button').innerHTML;
+            tr.append(tdThree);
+
+            // let del = document.querySelector('.delete-button');
+            tdDel.onclick = function (event) {
+                let deleteButton = event.target.closest('tr');
+                deleteButton.remove();
+            }
+
+            tdEdit.onclick = function (event) {
+                food.value = tdOne.innerHTML;
+                weight.value = tdTwo.innerHTML;
+                let editTr = document.querySelector('.edit');
+                if (editTr) {
+                    editTr.classList.remove('edit');
+                }
+                event.target.closest('tr').classList.add('edit');
+            }
+
+            save.onclick = function () {
+                let editTr = document.querySelector(".edit");
+                if (editTr) {
+                    editTr.firstChild.innerHTML = food.value;
+                    editTr.children[1].innerHTML = weight.value;
+                    editTr.classList.remove("edit");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

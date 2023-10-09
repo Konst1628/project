@@ -1,4 +1,4 @@
-window.addEventListener('load', function() {
+/*window.addEventListener('load', function() {
 	let elem = document.querySelector("div");
 	elem.className = "todo";
 	
@@ -83,4 +83,4 @@ h2{
 	button{
 	width: 20%;
 	border: 2px solid coral;
-	} 
+	} */
