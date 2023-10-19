@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .error {
+            background: red;
+        }
+    </style>
+
+    Ваш email: <input type="email" id="input">
+    <input type="text" style="width: 280px" placeholder="введите неверный email и кликните сюда">
+
+    <script>
+        input.onblur = function() {
+            if(!this.value.includes('@')) { //не email
+            //показать ошибку
+            this.classList.add("error");
+            //...и вернуть фокус обратно
+            input.focus();
+             } else {
+                 this.classList.remove("error");
+             }
+        };
+    </script>
+</body>
+</html>

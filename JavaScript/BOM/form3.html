@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Метод click группы переключателей</h1>
+    <form name="Test1">
+        <input type="radio" name="Sex" value="Man" checked>Мужской
+        <input type="radio" name="Sex" value="Woman">Женский
+        <br>Состояние переключателей можно изменить и этой кнопкой
+        <input type="button" value="Смена состояния" onClick="btnClick();">
+    </form>
+
+    <script>
+        function btnClick() {
+            if(document.Test1.Sex[0].checked){
+                document.Test1.Sex[1].click();
+            }
+            else{
+                document.Test1.Sex[0].click();
+            }
+        }
+    </script>
+</body>
+</html>

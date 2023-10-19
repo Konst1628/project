@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--CHANGE-->
+    <select onchange="alert(this.value)">
+    <option value="">Выберите что-нибудь</option>
+    <option value="1">Вариант 1</option>
+    <option value="2">Вариант 2</option>
+    <option value="3">Вариант 3</option>
+    </select>
+
+
+    <!--INPUT-->
+    <input type="text" id="input"> oninput:
+    <span id="result"></span>
+
+    <script>
+    input.oninput=function() {
+        result.innerHTML=input.value;
+    };
+</script>;
+
+<!--SUBMIT-->
+<form onsubmit="alert('submit!');return false">
+Первый пример: нажмите Enter:
+<input type="text" value="Text"><br>
+Второй пример: нажмите на кнопку "отправить":
+<input type="submit" value="Отправить">
+</form>
+
+<form onsubmit="alert('submit!'); return false">
+<input type="text" size="30"
+value="Установите фокус здесь и нажмите Enter">
+
+<input type="submit" value="Отправить"
+onclick="alert('click')">
+</form>
+
+<script>
+    let form = document.createElement('form');
+    form.action= 'https://google.com/search';
+    form.method= 'GET';
+
+    form.innerHTML='<input name="q" value="test">';
+    //перед отправкой формы, ее нужно вставить в документ
+    document.body.append(form);
+
+    form.submit();
+</script>
+</body>
+</html>

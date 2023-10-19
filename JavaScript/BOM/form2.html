@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <select id="select">
+            <option value="apple">Яблоко</option>
+            <option value="pear">Груша</option>
+            <option value="banana">Банан</option>
+        </select>
+        <input id="text">
+        <textarea id="textarea"></textarea>
+        <input type="checkbox" id="check">
+    </form>
+
+    <script>
+        text.value="Новое значение";
+        textarea.value= "Новый текст";
+        check.checked=true; //для чекбоксов и переключателей все три строки делают одно и то же 
+        select.options[2].selected = true;
+        select.selectIndex = 2;
+        select.value= 'banana';
+    </script>
+</body>
+</html>

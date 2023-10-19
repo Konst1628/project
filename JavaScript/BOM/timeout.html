@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      /* function sayHi() {
+            alert('Привет')
+        }
+        setTimeout(sayHi, 3000);
+
+        function sayHi2(phrase,who) {
+            alert(phrase + ',' + who);
+        }
+        setTimeout(sayHi2, 3000, "Hello", "John")
+
+        let timerId = setTimeout(() => alert("ничего не происходит"),1000);
+        alert(timerId); // индификатор таймера
+        clearTimeout(timerId);
+        alert(timerId);
+
+        //повторить с интервалом 2 секунды
+        let timerId = setInterval(() => alert('tick'), 2000);
+        // остановить вывод через 5 секунд
+        setTimeout(() => {clearInterval(timerId);
+        alert('stop');}, 5000);
+*/
+
+        let timerID = setTimeout(function tick(){
+            alert('tick');
+            timerId=setTimeout(tick,2000);
+        }, 2000);
+        </script
+
+</body>
+</html>

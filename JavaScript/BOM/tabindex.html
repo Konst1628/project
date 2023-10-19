@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        li {
+            cursor:pointer;
+        }
+        :focus { 
+            outline: 1px dashed green;
+        }
+    </style>
+    Кликните первый пункт в списке и нажмите Tab.
+    <ul>
+        <li tabindex="1">One</li>
+        <li tabindex="0">Zero</li>
+        <li tabindex="2">Two</li>
+        <li tabindex="-2">Minus one</li>
+    </ul>
+</body>
+</html>

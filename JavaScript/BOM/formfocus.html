@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+    <style>
+        .invalid {
+            border-color: red;
+        }
+
+        #error {
+            color: red;
+        }
+    </style>
+
+    Ваш email: <input type="email" id="input">
+    <div id="error"></div>
+
+    <script>
+        input.onblur = function () {
+            if (!input.value.includes('@')) { //не email
+                input.classList.add('invalid');
+                error.innerHTML = 'Пожалуйста,введите правильный email.'
+            }
+        };
+
+        input.onfocus = function () {
+            if (this.classList.contains('invalid')) {
+                //удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
+                this.classList.remove('invalid');
+                error.innerHTML = "";
+            }
+        };
+    </script>
+</body>
+
+</html>
