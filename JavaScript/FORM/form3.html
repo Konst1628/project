@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let str= "Я ЛюБлЮ JavaScript";
+       // let regexp = /люблю/i;
+       // alert(regexp.test(str));//true
+
+        //let str1= "+7(903)-123-45-67";
+       // let regexp= /\d/;
+       // alert(str1.match(regexp)); //7
+
+       // let str2= "+7(903)-123-45-67";
+      //  let regexp= /\d/g
+      //  alert(str2.match(regexp)); //массив совпадений: 7,9,0,3,1,2,3,4,5,6,7
+     //   alert(str2.match(regexp).join('')); //  79031234567
+
+
+       // let str = "+7(903)-123-45-67";
+        //alert(str.match(/\d/g).join('')); //79031234567
+        
+        let str = "+7(903)-123-45-67";
+        alert(str.replace(/\D/g,'')); //79031234567
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str="Любо,братцы,любо!";
+        let result=str.match(/любо/i); //без флага g
+        alert(result[0]); //Любо(первое совпадение)
+        alert(result.length); //1
+
+        alert("Люблю HTML".replace(/HTML/, "$& и JavaScript")); // Люблю HTML и JavaScript
+        alert("We will, we will".replace(/we/i,"I"));// I will, we will c флагом g
+        alert("We will,we will".replace(/we/ig, "I")); // I will, I will
+
+        alert('12-34-56'.replace("-",":")) // 12:34-56
+        alert('12-34-56'.replace(/-/g,":")) // 12:34:56
+    </script>
+</body>
+</html>

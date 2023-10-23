@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form class="my-form">
+        <label for="username">Логин:</label>
+        <input id="username" class="username" type="text" name="username" minlength="3"
+        maxlength="20" required>
+        <br>
+        <label for="password">Пароль:</label>
+        <input id="password" class="password" type="password" name="password" minlength="8" 
+        maxlength="20" required>
+        <br>
+        <label for="confirmPassword">Повторите пароль:</label>
+        <input id="confirmPassword" class="confirm-password" type="password" name="confirmPssword"
+        minlength="8" maxlength="20" required>
+        <br>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <script>
+const form = document.querySelector('.my-form');
+const loginInput = form.querySelector('.username');
+const passwordInput = form.querySelector('.password');
+const confirmPasswordInput = form.querySelector('.confirm-password');
+
+form.addEventListener('submit', (evt)=>{
+    //Отменяем действие по умолчанию
+    evt.preventDefault();
+
+    //Получаем значения полей формы
+    const login = loginInput.value;
+    const password=passwordInput.value;
+    const confirmPassword = confirmPasswordInput.value;
+
+    //Проверяем что поля заполнены
+    if (!login|| !password || !confirmPassword) {
+        alert('Пожалуйста, заполните все поля');
+        return;
+    }
+    // Проверяем, что имя пользователя содержит только буквы и цифры
+    if(!isValidLogin(login)) {
+        alert('Логин может содержать только буквы на латинице и цифры');
+        return;
+    }
+//Проверяем что пароли совпадают
+if(password !== confirmPassword) {
+    alert('Пароли не совпадают');
+    return;
+}
+    //Если все в порядке,отпраялем форму
+    form.submit();
+});
+
+function isValidLogin(login) {
+    //Проверка имени регулярным выржаением 
+    const pattern = /^[a-zA-Z0-9]+$/;
+    return pattern.test(login);
+}
+    </script>
+</body>
+</html>

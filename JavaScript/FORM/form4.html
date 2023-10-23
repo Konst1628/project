@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str= "Mary had a little lamb";
+        alert (/^Mary/.test(str)); //true
+
+        let str1= "it's fleece was white as snow";
+        alert (/snow$/.test(str1)); //true
+        
+        let regexp = /\.{3,}/g;
+       alert("Привет!... Как дела?.....".match(regexp));
+    </script>
+</body>
+</html>
