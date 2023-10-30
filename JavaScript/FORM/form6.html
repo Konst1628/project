@@ -8,15 +8,54 @@
 </head>
 <body>
     <script>
-        let str="+7(903)-123-45-67";
-        alert(str.match(/\d+/g)); // 7,903,123,45,67
+      //  let str="+7(903)-123-45-67";
+      //  alert(str.match(/\d+/g)); // 7,903,123,45,67
 
-        let str1= "Следует писать color или colour?";
-        alert(str1.match(/colou?r/g)); //color,colour
+      //  let str1= "Следует писать color или colour?";
+     //   alert(str1.match(/colou?r/g)); //color,colour
 
         alert("100 10 1".match(/\d0*/g)); //100,10,1
         alert("100 10 1".match(/\d0+/g)); //100,10//1
         alert("0 1 12.345 7890".match(/\d+\.\d+/g)); // 12.345
+        alert("<h1>Привет!</h1>".match(/<[a-z][a-z0-9]*>/gi)); //<h1>
+            alert("123 456".match(/\d+ \d+?/)); //123 4
+
+          /*  let regexp= /([01]\d|2[0-3]):[0-5]\d/g;
+            alert("00:00 10:10 23:59 25:99 1:2".match(regexp)); // 00:00,10:10,23:59
+
+            let regexp= /html|css|java(script)?/gi;
+            let str= "Сначала появился язык Java, затем HTML, потом JavaScript";
+            alert(str.match(regexp)); // Java,HTML,JavaScript
+
+            let str1="html and css"
+            let result=str1.replace(/html|css/gi,str1=>str1.toUpperCase());
+            alert(result); // HTML and CSS
+
+            let str2="1 индейка стоит 30€";
+            alert(str2.match(/\d+(?=€)/)); // 30, число 1 проигнорировано, так как за ним НЕ следует $
+            let str3="2 индейки стоит 60€";
+            alert(str3.match(/\d+(?!€)/)); //2 (в этот раз проигнорирована цена)
+            
+            let str = 'Больше о JavaScript на https://javascript.info';
+            let regexp = /javascript/ig;
+            let result;
+            while(result=regexp.exec(str)){
+                alert(`Найдено ${result[0]} на позиции ${result.index}`);
+            }*/
+
+            let str='let varName="value"';
+            let regexp=/\w+/g; // без флага g свойство lastindex игнорируется
+            regexp.lastIndex=4;
+            let word = regexp.exec(str);
+            alert(word); // varName
+
+            let str2= "Я люблю JavaScript!";
+            let regexp2 = /Java.+/;
+            alert(str2.search(regexp2)); //8
+
+            let str3 = "John Smith"; // поменять местами имя и фамилию
+            alert(str3.replace(/(\w+) (\w+)/i,'$2,$1')); // Smith, John
+
     </script>
 
 </body>
