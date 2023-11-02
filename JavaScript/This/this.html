@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <script>
+      /*  function hello() {
+            console.log("привет", this);
+        }
+        hello();
+
+        let student = {
+            name:'Ivan',
+            age:22,
+            sayHello:hello,
+            sayHelloWindow:hello.bind(window)
+        }
+        student.sayHello();
+        student.sayHelloWindow();*/
+
+      /*  let man={
+            name:"Сергей",
+            age:36,
+            logInfo:function() {
+                console.log(`Name is ${this.name}`);
+                console.log(`Age is ${this.age}`);
+            }
+        }
+        let women={
+            name: 'Света',
+            age:27
+        }
+        man.logInfo()
+        man.logInfo.bind(women)();*/
+
+        let man = {
+            name:"Сергей",
+            age: 36,
+            logInfo: function(job,phone){
+                console.log(`Name is ${this.name}`);
+                console.log(`Name is ${this.age}`);
+                console.log(`Job is ${job}`);
+                console.log(`Phone is ${phone}`);
+            }
+        }
+        let women = {
+            name: 'Света',
+            age: 27
+        }
+        man.logInfo.bind(women,'frontend','+375337896456')();
+        man.logInfo.call(women, 'frontend','+375337893456');
+        man.logInfo.apply(women,['frontend','+375337889634']);
+
+        
+// Максимальный элмент в массиве через apply
+        let arr=[10,45,50,344,30];
+        console.log(Math.max.apply(null,arr));
+    </script>
+
+
+
+</body>
+
+</html>

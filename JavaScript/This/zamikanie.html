@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //1
+    function createCalcFunction(n) {
+        return function() {
+            console.log(10*n)
+        }
+    }
+    console.log(createCalcFunction(20));
+
+    const calc= createCalcFunction(20);//фунция которую мы получаем из другой функции
+    calc(); //получаем доступ к области видимости верхней функции
+
+    //2 
+
+    function createSum(a) {
+        return function(b) {
+            return a+b
+        }
+    }
+    console.log(createSum(2) (3));
+    let sum = createSum(7);
+    console.log(sum(7));
+
+    //3
+    function addSquares(a,b) {
+        function square(x) {
+            return x*x;
+        }
+        return square(a) +square(b);
+    }
+    a= addSquares(2,3); // возвращает 13
+    b= addSquares(3,4);// возвращает 25
+    c=addSquares(4,5);// возвращает 41
+    console.log(a,b,c);
+    </script>
+</body>
+</html>

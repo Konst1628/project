@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Район</th>
+                <form id="form">
+                    <div>
+                        <input type="text" id="input" class="input-name" required>
+                    </div>
+                    <br>
+                    <div>
+                        <select id="select" name="district" required>
+                            <option value="">Выберите район</option>
+                            <option value="Витебский район">Витебский район</option>
+                            <option value="Полоцкий район">Полоцкий район</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div id="radios">
+                        <input type="radio" name="type" id="type-1" value="Город" required>
+                        <label for="type-1">Город</label>
+                        <input type="radio" name="type" id="type-2" value="Поселок годоского типа">
+                        <label for="type-2">Поселок городского типа</label>
+                    </div>
+                    <br>
+                    <div>
+                        <button class="add-button" type="submit">Добавить</button>
+                        <button class="save-button">Сохранить</button>
+                    </div>
+                </form>
+                <th>Тип</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Витебск</td>
+                <td>Витебский район</td>
+                <td>Город</td>
+                <td>
+                    <button class="edit-button">Редактировать</button>
+                    <button class="delete-button">Удалить</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <script src="task.js"></script>
+</body>
+
+</html>

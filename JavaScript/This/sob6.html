@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="sob.css">
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+    <script>
+        //https://learn.javascript.ru/coordinates
+        // https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect
+        document.querySelector(".child").onmousemove = function (event) {
+            let x = Math.round(event.clientX - event.target.getBoundingClientRect().left);
+            console.log("window x", event.target.getBoundingClientRect().left);
+            console.log("viewreport x", event.target.getBoundingClientRect().left);
+
+            let y = Math.round(event.clientY - event.target.getBoundingClientRect().top);
+            console.log("window y", event.clientY);
+            console.log("viewreport y", event.target.getBoundingClientRect().top);
+            event.target.innerHTML = `X: ${x}<br>Y:${y}`;
+        }
+    </script>
+</body>
+
+</html>

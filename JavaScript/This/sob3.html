@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="sob.css">
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+    <script>
+        //возникает когда указатель мыши входит в область, принадлежащую элементу
+
+        document.querySelector(".parent").onmouseenter = function (event) {
+            event.target.classList.add("bg-blue");
+        }
+        document.querySelector(".child").onmouseenter = function (event) {
+            event.target.classList.add("bg-black");
+            event.target.parentElement.classList.remove("bg-blue");
+        }
+        // происходит когда указатель мыши уходит из области принадлежащей элементу
+
+        document.querySelector(".parent").onmouseleave = function (event) {
+            event.target.classList.remove("bg-blue");
+        }
+        document.querySelector(".child").onmouseleave = function (event) {
+            event.target.classList.remove("bg-black");
+            event.target.parentElement.classList.add("bg-blue");
+        }
+
+    </script>
+</body>
+
+</html>

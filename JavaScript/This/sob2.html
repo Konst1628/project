@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="sob.css">
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+    <script>
+//event.target - это элемент, на который курсор перешел.
+//event.relatedTarget - это элемент с которого курсор ушел(relatedTarget - target)
+document.querySelector(".parent").onmouseover=function(event){
+    if(event.target.classList.contains("parent")) {
+        event.target.classList.add("bg-blue");
+    }
+    if(event.target.classList.contains("child")) {
+        event.target.classList.add("bg-black");
+        event.relatedTarget.classList.add("bg-blue");
+    }
+}
+
+
+document.querySelector(".parent").onmouseout=function(event) {
+    if(event.target.classList.contains("parent")) {
+        event.target.classList.remove("bg-blue");
+    }
+    if(event.target.classList.contains("child")) {
+        event.target.classList.remove("bg-black");
+    }
+}
+    </script>
+</body>
+</html>
