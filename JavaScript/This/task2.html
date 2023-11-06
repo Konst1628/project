@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+
+</head>
+
+<body>
+    <ul>
+        <li>100</li>
+        <li>200</li>
+        <li>300</li>
+        <li>400</li>
+        <li>500</li>
+    </ul>
+
+    <script>
+        let ul = document.querySelector("ul");
+        ul.addEventListener("click", function (event) {
+            if (event.target.tagName != "LI")
+                return;
+            let liRed = this.querySelector(".bg-red");
+            if (liRed) {
+                liRed.classList.remove("bg-red");
+            }
+            event.target.classList.add("bg-red");
+        });
+        ul.addEventListener("dblclick", function (event) {
+            if (event.target.tagName != "LI")
+                return;
+            let li = document.createElement("li");
+            li.innerHTML = event.target.innerHTML;
+            this.insertAdjacentElement("beforeend", li);
+        });
+        ul.addEventListener("mouseover", function (event) {
+            if (event.target.tagName != "LI")
+                return;
+            event.target.innerHTML = `<b>${event.target.innerHTML}</b>`
+        });
+        ul.addEventListener("mouseout", function (event) {
+            if (event.target.tagName != "LI")
+                return;
+            event.target.innerHTML = event.target.firstElementChild.innerHTML;
+        });
+    </script>
+
+</body>
+
+</html>

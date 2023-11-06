@@ -1,0 +1,11 @@
+.list {
+    background: mediumturquoise;
+    width: 100px;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+  
+}
+.list.yt-icon-button:active {
+    vertical-align: middle;
+    color: red;}

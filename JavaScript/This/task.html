@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="task.css">
+</head>
+<body>
+    <div class="parent">
+    </div>
+
+    <script>
+        //возникает когда указатель мыши входит в область, принадлежащую элементу
+
+        document.querySelector(".parent").onmouseenter = function (event) {
+            event.target.classList.add("bg-blue");
+      }
+  
+        // происходит когда указатель мыши уходит из области принадлежащей элементу
+
+      document.querySelector(".parent").onmouseleave = function (event) {
+            event.target.classList.remove("bg-blue");
+        }
+     
+        // Увеличиваем правой кнопкой
+        document.querySelector(".parent").addEventListener("click", function(event) {
+           if (event.target.classList.contains("parent")) {
+            let styles= getComputedStyle(this);
+            let width= parseInt(styles.width);
+            let height= parseInt(styles.height);
+        
+            this.style.width = `${width/2}px`;
+            this.style.height = `${height/2}px`;
+                   }
+      });
+
+      // Уменьшаем левой кнопкой
+      document.querySelector(".parent").addEventListener("contextmenu", function(event) {
+          event.preventDefault();
+        
+
+           let styles= getComputedStyle(this);
+            let width= parseInt(styles.width);
+            let height= parseInt(styles.height);
+        
+            this.style.width = `${width*2}px`;
+            this.style.height = `${height*2}px`;
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+    html {
+        height: 100%;
+    }
+    body { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100%;
+    }
+
+    .box {
+        width: 400px;
+        height: 400px;
+        background-color: chartreuse;
+    }
+
+    .box > div{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        float: left;
+    }
+    .black { 
+        background: black;
+    }
+    .white { 
+        background: white;
+    }
+    .chess{ 
+        width: 80px;
+        height: 80px;
+        margin: 10px;
+        background: grey;
+        border-radius: 50%;
+    }

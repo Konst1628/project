@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <link rel="stylesheet" type="text/css" href="task3.css">
+</head>
+<body>
+ <div class="box">
+     <div class="white"></div>
+     <div class="black"></div>
+     <div class="white"></div>
+     <div class="black"></div>
+     <div class="black"></div>
+     <div class="white"></div>
+     <div class="black"></div>
+     <div class="white"></div>
+     <div class="white"></div>
+     <div class="black"></div>
+     <div class="white"></div>
+     <div class="black"></div>
+     <div class="black"></div>
+     <div class="white"></div>
+     <div class="black"></div>
+     <div class="white"></div>
+ </div>
+
+
+ <div class="box-buttons">
+     <button class="first">Первая</button>
+     <button class="second">Вторая</button>
+     <button class="third">Третья</button>
+ </div>
+
+ <script>
+     function getRandomNumber(min,max) {
+         return Math.floor(Math.random()*(max-min+1))+min;
+     }
+
+     document.querySelector(".first").onclick=function() {
+         let chess=document.querySelector(".chess");
+         if(chess)
+         chess.remove();
+
+         chess=document.createElement("div");
+         chess.classList.add("chess");
+
+         let x=getRandomNumber(1,16);
+         document.querySelector(`.box>div:nth-child(${x})`).insertAdjacentElement("afterbegin", chess);
+     }
+document.querySelector(".second").onclick=function() {
+    let cells=document.querySelectorAll(".box>div");
+
+    Array.from(cells).forEach(function(cell) {
+        cell.classList.toggle("white");
+        cell.classList.toggle("black");
+    });
+}
+
+var angle = 0;
+document.querySelector(".third").onclick=function() {
+    angle+=90;
+    document.querySelector(".box").style.transform = `rotate(${angle}deg)`;
+}
+
+
+
+
+ </script>
+
+    
+</body>
+</html>

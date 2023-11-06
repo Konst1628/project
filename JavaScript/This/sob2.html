@@ -25,7 +25,6 @@ document.querySelector(".parent").onmouseover=function(event){
     }
 }
 
-
 document.querySelector(".parent").onmouseout=function(event) {
     if(event.target.classList.contains("parent")) {
         event.target.classList.remove("bg-blue");
@@ -33,6 +32,11 @@ document.querySelector(".parent").onmouseout=function(event) {
     if(event.target.classList.contains("child")) {
         event.target.classList.remove("bg-black");
     }
+}
+function ChangeColor(Element) {
+	if (Element.style.color == 'green') Element.style.color = 'red';
+	else Element.style.color = 'green';
+	return false;
 }
     </script>
 </body>
