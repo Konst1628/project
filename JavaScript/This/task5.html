@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Дана ссылка.Сделать так,чтобы при нажатии на ссылку 
+        не происходил переход по адресу-->
+
+    <a href="https://google.com/" onclick="noperevod(event);">Ссылка</a>
+    <script>
+        function noperevod(events) {
+            events.preventDefault();
+            alert('Не переходим по ссылке');
+        };
+    </script>
+
+
+
+</body>
+
+</html>

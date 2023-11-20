@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--Дано поле ввода и кнопка. Вводится число. При нажатии на кнопку сгенерировать маркированный 
+    список из чисел от 1 до введенного-->
+    <input type="number" id="number">
+    <button onclick="create()">Сгенерировать список</button>
+
+    <script>
+        function create() {
+            let ul = document.createElement('ul');
+            document.body.append(ul);
+            for (let i = 1; i < number.value; i++) {
+                let li = document.createElement('li');
+                li.innerHTML = i;
+                ul.append(li);
+            }
+        }
+    </script>
+</body>
+
+</html>

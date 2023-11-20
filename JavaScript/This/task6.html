@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="task6.css">
+</head>
+
+<body>
+    <!--Дано 10 блоков. Сделать так что при наведении в блоке менялась прозрачность фона
+    и выводился порядковый номер блока-->
+
+    <div class="child"><span>1</span></div>
+    <div class="child"><span>2</span></div>
+    <div class="child"><span>3</span></div>
+    <div class="child"><span>4</span></div>
+    <div class="child"><span>5</span></div>
+    <div class="child"><span>6</span></div>
+    <div class="child"><span>7</span></div>
+    <div class="child"><span>8</span></div>
+    <div class="child"><span>9</span></div>
+    <div class="child"><span>10</span></div>
+
+    <script>
+        let allChild = document.querySelectorAll('.child');
+        let span = document.querySelectorAll('.child span');
+
+        for (let i = 0; i < allChild.length; i++) {
+            allChild[i].addEventListener("mouseover", function (event) {
+                allChild[i].classList.add("bg-blue");
+                span[i].classList.add('dg-blue');
+
+            });
+        }
+        for (let i = 0; i < allChild.length; i++) {
+            allChild[i].addEventListener("mouseout", function (event) {
+                allChild[i].classList.remove("bg-blue");
+                span[i].classList.remove("dg-blue");
+
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="calc">
+        <input id="a"><br>
+        <input id="b"><br>
+        <input type="radio" value="+" name="operations" required id="operationAdd"> <label for="operationAdd">+</label>
+        <input type="radio" value="-" name="operations"  id="operationSub"> <label for="operationSub">-</label>
+        <input type="radio" value="*" name="operations"  id="operationMul"> <label for="operationMul">*</label>
+        <input type="radio" value="/" name="operations"  id="operationDiv"> <label for="operationDiv">/</label>
+    </form>
+    <div></div>
+    <script>
+        let radios = document.querySelectorAll("input[name='operations']");
+
+        for(let i=0; i<radios.length; i++) {
+            radios[i].onchange=function() {
+                let numberA= +a.value;
+                let numberB= +b.value;
+
+                let o = this.value;
+                let result;
+
+                switch (o) {
+                    case "+":
+                        result= numberA+numberB; break;
+                        case "-":
+                            result=numberA-numberB; break;
+                            case "*":
+                                result = numberA*numberB; break;
+                                case "/":
+                                    result= numberA / numberB; break;
+                }
+                document.querySelector("div").innerHTML=result;
+            }
+        }
+    </script>
+</body>
+</html>

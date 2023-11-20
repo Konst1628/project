@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function timeOut2() {
+            console.log("timeout 2")
+        }
+        console.log("Первый"); // закидывает в стек вызовов
+        console.log("Второй");
+        window.setTimeout(function(){console.log("timeout")},5000);// регистрирует функцию и в нужный момент вызывает
+        console.log("Третий");
+        
+        setTimeout(timeOut2,2000); // не блокируем поток
+        //http://latentflip.com/loupe
+    </script>
+</body>
+</html>
