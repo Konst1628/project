@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+</head>
+
+<body>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border:1px solid black;
+        }
+    </style>
+    <!--Дан выпадающий список с 5 цветами и блок. - 
+        сделать так, что каждый пункт был закрашен в соответствующий цвет - 
+        при выборе цвета сделать так,чтобы блок также закрашивался в выбранный цвет.-->
+
+    <select>
+        <option>Выберите цвет</option>
+        <option value="green">green</option>
+        <option  value="yellow">yellow</option>
+        <option  value="red">red</option>
+        <option  value="blue">blue</option>
+    </select>
+
+    <div id="box"></div>
+
+    <script>
+let allOptions = document.querySelectorAll('option');
+let select=document.querySelector('select');
+for(let i=0; i<allOptions.length; i++) {
+    allOptions[i].style.background=allOptions[i].value;
+}
+
+select.onchange=function() {
+    box.style.background=this.value;
+    console.log(this.value);
+}
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+</head>
+
+<body>
+    <style>
+        .color {
+            background: green;
+        }
+    </style>
+    <!-- Дана форма с одним полем ввода. - при уcтановки курсора в поле ввода закрашивать ее в синий цвет. 
+        - при убирании курсора из поля возвращать фон в начальное состояние.-->
+
+    <input type="text" value="text" id="input" />
+    <script>
+        input.onfocus = function () {
+            this.classList.add('color');
+        };
+        input.onblur = function (event) {
+            input.classList.remove('color');
+        };
+    </script>
+
+</html>

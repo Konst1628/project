@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* let arr=["Ilya","Kantor"];
+        //записывает firstName = arr[0]
+        //и surname= arr[I]
+        let[firstName, surname] = arr;
+        alert(firstName); // Ilya
+        alert(surname); // Kantor
+
+
+
+        let[firstName,,title]=["Julius","Caesar","Consul","of the Roman Republic"];
+        alert(title); //Consul
+
+
+        let[name1,name2,...rest]=["Julius","Caesar","Consul","of the Roman Republic"];
+        // rest это массив элементов,начиная с 3-го alert(rest[0]);
+        //Consul
+        alert(rest[1]);
+        //of the Roman Republic
+        alert(rest.length); //2 
+
+        //значения по умолчанию
+        let[name="Guest",surname="Anonymous"]=["Julius"];
+        alert(name); //Julius (из массива)
+        alert(surname); // Anonymous(значение по умолчанию)
+
+let options = {
+    title: "Menu",
+    width: 100,
+    height: 200
+};
+let{title,width,height} = options;
+alert(title); // Menu
+alert(width); //100
+alert(height); // 200
+
+let{height,width,title}={title:"Menu",height:200, width:100}
+alert(title); // Menu
+alert(width); //100
+alert(height); // 200
+
+let options = {
+    title: "Menu",
+    width: 100,
+    height: 200
+};
+
+let{width:w,height:h,title} = options;
+//width_>w//height_>h//title_>title
+alert(title); // Menu
+alert(w); //100
+alert(h); // 200
+
+let options = {
+    title: "Menu",
+    width: 200,
+    height: 100
+};
+//title=свойство с именем title
+//rest= объект с остальными свойствами
+let{title,...rest}=options;
+//сейчас title="Menu",rest={height:200,width:100}
+alert(rest.height);//200
+alert(rest.width); // 100*/
+
+
+
+//мы передаем объект в функцию
+let options={title:"My menu", items:["Item 1","Item2"]};
+//...и она немедленно извлекает свойства в переменные
+function showMenu({
+    title="Untitled",
+    width=200,
+    height=100,
+    items=[]
+}) {
+    //title, items - взято из options,
+    //width,height- используются значения по умолчанию
+    alert(`${title} ${width}${height}`); // My Menu 200 100
+    alert(items);//Item1,Item2
+}
+showMenu(options);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task4</title>
+</head>
+
+<body>
+    <!--Дано поле ввода, кнопка и текст. В поле ввода разрешить вводить не более одного символа. 
+        Если в поле ввода введен один символ, 
+        то при нажатии на кнопку неоходимо подсчитать
+        - сколько раз этот символ встречается в тексте.-->
+    <input type="text">
+    <button>Add</button>
+    <div class="text"></div>
+
+    <script>
+        document.querySelector('input').addEventListener('input', function () {
+            this.value = this.value[0];
+        });
+
+
+
+        /*edit.addEventListener('input', function(e) {
+          if (!e.target.value.match(/[^0-9\-()]+/)) {
+            e.target.value = '';
+          }
+          if (e.target.value.length > 1) {
+            e.target.value = e.target.value[0];
+          }
+        });*/
+    </script>
+
+</body>
+
+</html>

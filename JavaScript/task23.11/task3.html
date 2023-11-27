@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+</head>
+
+<body>
+    <style>
+        #text {
+            display: none;
+        }
+    </style>
+    <!-- Дана кнопка (Показать) и div с текстом, который по-умолчанию скрыт. 
+        При нажатии на кнопку с надписью "Показать" отображать данный div и менять название кнопки на "Скрыть". 
+        При нажатии на кнопку с надписью "Показать" скрывать div и менять название кнопки на "Показать".-->
+
+    <input type="button" id="hider" value="Показать" />
+
+    <div id="text">Текст,который по умолчанию скрыт</div>
+
+    <script>
+        document.addEventListener("hidden", hiddenCloseclick());
+        document.getElementById('hider').addEventListener("click", hiddenCloseclick);
+        function hiddenCloseclick() {
+            let hidden = document.getElementById('text');
+            if (hidden.style.display == "none") {
+                hidden.style.display = "block";
+                hider.value = "Скрыть";
+            } else {
+                hidden.style.display = "none"
+                hider.value = "Показать";
+            }
+        };
+    </script>
+</body>
+
+</html>
