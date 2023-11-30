@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task4</title>
+</head>
+
+<body>
+    <!--Напишите функцию, которая выводит в консоль числа от 1 до n, 
+где n — целое число, которое функция принимает в качестве параметра, при этом:
+- выводит fizz вместо чисел, кратных 3;
+- выводит buzz вместо чисел, кратных 5;
+- выводит fizzbuzz вместо чисел, кратных и 3, и 5. -->
+
+    <script>
+        const list = [];
+
+        for (let i = 1; i <= 100; i++) {
+            if (i % 15 === 0) {
+                list.push("FizzBuzz");
+            }
+            else if (i % 3 === 0) {
+                list.push("Fizz");
+            }
+            else if (i % 5 === 0) {
+                list.push("Buzz");
+            } else {
+                list.push(i);
+            }
+        }
+        console.log(list);
+    </script>
+</body>
+
+</html>

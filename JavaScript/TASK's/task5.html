@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+</head>
+
+<body>
+    <!--Напишите функцию,которая принимает строку на англ.языке в качестве аргумента
+    и возвращает количество гласных, содержащихся в этой строке-->
+
+    <script>
+       function vowel_count(str1) {
+            var vowel_list = 'oieaeOIEAE';
+            var vcount = 0;
+            for (var x = 0; x < str1.length; x++) {
+                if (vowel_list.indexOf(str1[x]) !== -1) {
+                    vcount += 1;
+                }
+            }
+            return vcount;
+        }
+        console.log(vowel_count('Hello world')); //3
+
+        var q = prompt('Посчитать количество гласных', 'Количество гласных');
+
+        function vowels(str) {
+            let v = "аоиеёэыуюя";
+            let count = 0;
+            for (let i = 0; i < str.length; i++) {
+                let char = str[i];
+                if (v.includes(char))
+                    ++count;}
+            return count;}
+        console.log(vowels(q));
+
+let str = "hello world people";
+        function include() {
+            return(str.match(/[aeiouy]/ig)).length;
+        }
+        console.log(include());
+
+
+        /* function vowels2(str) {
+             let v = "аоиеёэыуюя";
+             let count = 0;
+             [...str].forEach(char => {
+                 if (v.includes(char))
+                     ++count;
+             });
+             return count;
+         }
+        
+         function vowels3(str) {
+             let v = "аоиеёэыуюя";
+             let count = [...str].filter(element => v.includes(element)).length;
+             return count;
+         }
+        
+         function vowels4(str) {
+             let v = "аоиеёэыуюя";
+             let count = [...str].reduce((a, b) => v.includes(b) ? a + 1 : a, 0);
+             return count;
+         }
+        */
+    </script>
+</body>
+
+</html>

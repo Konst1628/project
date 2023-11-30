@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function doSomethingOldStyle(successCallback,failureCallback) {
+            console.log("Готово."); // Успех в половине случаев
+            if(Math.random()>0.5) {
+                successCallback("Успех");
+            }
+            else{
+                failureCallback("Ошибка");
+            }
+        }
+        function successCallback(result) {
+            console.log("Успешно завершено с результатом"+result);
+
+        }
+        function failureCallback(error) {
+            console.log("Завершено с ошибкой" + error);
+        }
+        doSomethingOldStyle(successCallback, failureCallback);
+
+        
+    </script>
+</body>
+</html>

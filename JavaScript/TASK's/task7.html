@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task7</title>
+</head>
+
+<body>
+    <!--Напишите функцию, которая будет проходить через массив целых чисел
+    и выводить индекс каждого элемента с задержкой в 3 секунды-->
+
+    <script>
+  /*       const arr = [5, 20, 13, 88];
+        for (var i = 0; i < arr.length; i++) {
+            setTimeout(function (i_local) {
+                return function () {
+                    console.log('Индекс этого числа: ' + i_local);
+                }
+            }(i), 3000);
+        }
+*/
+        
+       const arr = [1,2,3,4,5];
+var delta = 3000;
+for (let i = 0; i < arr.length; i++) {
+  setTimeout(function() {
+    console.log('Индекс этого числа: ' + i);
+  }, i*delta );
+}
+    </script>
+</body>
+
+</html>
