@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Напишите функцию, которая на вход получает произвольное 
+        количество аргументов и возвращает массив, состоящих только 
+        из уникальных значений параметров функции. */
+
+        function getUniqueParams(...params) {
+            /*...params -sprad-оператор говорит о том, что все параметры функции,
+            которые не описаны -будут помещаться в params(массив)*/
+            let setCollection = new Set(params);
+            //params= Array.from(setCollection);
+            params = [...setCollection];
+            return params;
+        }
+        console.log(getUniqueParams(1, 2, 3, 5, 6, 8, 3, 6, 4, 3));
+
+        /*Дано 2 массива с целыми числами. 
+        Написать функцию, которая возвращает массив элементов, которые входят в оба массива без повторений. */
+
+        let numberFirst = [1, 8, 7, 6];
+        let numberSecond = [2, 8, 4, 7, 7]
+
+        function getUnionOfArray(a, b) {
+            let result = [];
+            a.forEach((item) => {
+                if (b.includes(item) && !result.includes(item)) {
+                    result.push(item);
+                }
+            })
+            return result
+        }
+        console.log(getUnionOfArray(numberFirst, numberSecond));
+
+        /*Написать функцию, принимающую на вход массив дат и сортирующая их в порядке возрастания. */
+
+        function getDiffDate(date1, date2) {
+            let a = date1.split(".").map((item) => +item);
+            let b = date2.split(".").map((item) => +item);
+            if ((a[2] > b[2]) || ((a[2] == b[2]) && (a[1] > b[1])) || ((a[2] == b[2]) && a[1] == b[1] && a[0] > b[0])) {
+                return 1;
+            }
+            if (a[2] == b[2] && a[1] == b[1] && a[0] == b[0]) {
+                return 0;
+            }
+            return -1;
+        }
+
+        let array = ['01.12.2020', '04.05.2023', '05.02.1999', '13.12.2008', '12.12.1980'];
+
+        console.log(array);
+        array.sort(getDiffDate);
+        console.log(array);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <script>
+        const citiesBelarus=['Витебск','Минск','Гомель','Гродно','Могилев','Брест'];
+        const regionalCitiesBelarus = ['Пинск','Бобруйск','Мозырь','Лида','Орша']; //spread
+        console.log(citiesBelarus);
+        console.log(...citiesBelarus); // Получаем набор строк
+
+        const newCities = [...citiesBelarus];
+        console.log(...newCities); // Получаемп набор строк 
+
+        const allCities=[...citiesBelarus, ...regionalCitiesBelarus];
+        console.log(allCities);
+        const allConcatCities = citiesBelarus.concat(allCities);
+        console.log(allConcatCities);
+
+        const addNewCities= [...citiesBelarus, 'Жлобин', ...regionalCitiesBelarus];
+        console.log(addNewCities);
+
+        const populationCities= {
+            Minsk:1742124,
+            Gomel:480951,
+            Mogelev:369200,
+            Vitebsk: 342700,
+            Grodno:317365,
+            Brest:300715
+        }
+        //console.log(...populationCities); // разворачивает ключи
+        console.log({...populationCities});
+
+        const populationRegionalCities = {
+            Bobrujsk:220517,
+            Baranovichi: 168772,
+            Borisov: 143919,
+            Minsk: 1800000,
+        }
+        const allCitiesObj={...populationCities, ...populationRegionalCities};
+        console.log(allCitiesObj)
+
+        const allCitiesObjAdd={...populationCities, Pinsk:130777,...populationRegionalCities};
+        console.log(allCitiesObjAdd)
+
+        const uniqueallCities={...populationCities,...populationRegionalCities};
+        console.log(uniqueallCities)
+
+        // Поиск max и min в массиве
+        let array=[1,9,33,7,6];
+        let max=Math.max(array);
+        console.log(max); //NaN
+        max= Math.max(...array);
+        console.log(max);
+
+    let allDivs= document.querySelectorAll('div');
+    console.log(allDivs);
+    //console.log(allDivs.map((item,index)=>index));// Error
+
+    const nodes= [...allDivs];
+    console.log(nodes);
+    console.log(nodes.map((item,index)=>index));
+// Отличие в области применения
+    function calc(a,b,...rest) {
+        console.log(rest); // rest
+        console.log(...rest); //spread
+        return a*b*rest.reduce((a,i)=>a*i)
+    }
+    console.log(calc(1,2,3,4));
+
+    let elements=[1,2,3,4,5];
+    let[a,b,...rest]=elements;
+    console.log(a,b,rest);
+
+    let student={
+        name:'Alla',
+        surname:'Ivanova',
+        age:22,
+        height:168
+    }
+    let{name,surname,...restStud} = student;
+    console.log(name,surname,restStud);
+            </script>
+</body>
+</html>
