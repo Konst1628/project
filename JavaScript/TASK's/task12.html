@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task12</title>
+</head>
+
+<body>
+    <!-- Дано предложение. Найти символ, который чаще всего в нем встречается. -->
+    <script>
+        let str = "белый белый снег ветер за плечами";
+
+        let repeat = {};
+        let maxKey = '';
+        for (var i = 0; i < str.length; i++) {
+            var key = str[i];
+            if (!repeat[key]) {
+                repeat[key] = 0;
+            }
+            repeat[key]++;
+            if (maxKey == '' || repeat[key] > repeat[maxKey]) {
+                maxKey = key;
+            }
+        }
+console.log(maxKey + ":"+repeat[maxKey]);
+
+
+
+
+        /*
+
+        function mostUsedLetters(sourceString) {
+            const filteredStr = sourceString.toLowerCase().replace(/[^а-яё]/g, '');
+            const charsCount = {};
+            for (const chr of filteredStr)
+                charsCount[chr] = (charsCount[chr] || 0) + 1;
+            const result = Object.keys(charsCount)
+                .map(chr => ({ letter: chr, count: charsCount[chr] }));
+            return result.sort((a, b) => b.count - a.count);
+        }
+        const text = 'Дано предложение. Найти символ, который чаще всего в нем встречается';
+        const top3 = mostUsedLetters(text).slice(0, 3);
+        console.log(top3.map((obj, i) => `${i + 1}: буква '${obj.letter}'\n   встречается ${obj.count} раз(а)`).join('\n'));
+                      */
+    </script>
+</body>
+
+</html>

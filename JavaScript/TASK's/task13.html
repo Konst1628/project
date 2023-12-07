@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task13</title>
+</head>
+
+<body>
+    <!--Дана строка, состоящее из слов между которыми 
+        может быть больше одного пробела. 
+        Удалить все лишние пробелы, 
+        т.е. оставить по 1 пробелу между словами, 
+        в том числе в начале и в конце. -->
+
+
+    <script>
+        var str = ' some     string  and        something  ';
+        str = str.replace(/ +/g, ' ').trim();
+        console.log(str);
+    </script>
+</body>
+
+</html>

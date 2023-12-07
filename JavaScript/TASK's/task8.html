@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task8</title>
+    <style>
+        .one {
+	list-style: none;
+	padding-left: 12px;
+}
+.one li {
+	padding: 5px 0px 10px 5px;
+	width: 130px;	
+}
+
+.one li:hover {
+	background-color: #2315e7;	
+}
+    </style>
+</head>
+<body>
+    <!--1.Дан список из 10 чисел в виде маркированного списка. 
+        При наведении на четный элемент списка он подсвечивает красным цветом, 
+        а на нечетный элемент списка - синим. -->
+  
+        <ul class="one">
+            <li class="some">1</li>
+            <li>2</li>
+            <li class="some">3</li>
+            <li>4</li>
+            <li class="some">5</li>
+            <li >6</li>
+            <li class="some">7</li>
+            <li>8</li>
+            <li class="some">9</li>
+            <li>10</li>
+        </ul>
+
+        <script>
+            let color = document.querySelectorAll(" .some");
+
+color.forEach(function(el){
+   el.onmouseover = function(){
+        this.style.background = "red";
+   } 
+   el.onmouseout = function(){
+        this.style.background = "white";
+        color.forEach(function(el){       
+        });
+   }
+});
+
+        </script>
+</body>
+</html>

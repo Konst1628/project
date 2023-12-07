@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task9</title>
+</head>
+<body>
+    <!--Дано натурально число. Получить число, которое образуется 
+        из записи цифр данного в обратном порядке. -->
+
+        <script>
+          let n = 12345678 + '';
+let number = n[n.length -1];
+for(var i = n.length - 2; i >= 0; i--)
+    number += n[i];
+console.log(number);
+
+var a = 12345;
+alert(('' + a).split('').reverse().join(''));
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task11</title>
+</head>
+
+<body>
+    <!--Дано 2 массива. Проверить, можно ли один массив путем 
+        перестановки элементов получить из второго массива. -->
+
+        
+    <script>
+        let arr1 = [1,9,8];
+        let arr2 = [8,9,1];
+        function compare() {
+            if(arr1.sort((a,b)=>a-b).join('')==arr2.sort((a,b)=>a-b).join('')) {
+                return true
+            }
+            else return false
+        }
+        console.log(compare());
+    </script>
+</body>
+
+</html>
