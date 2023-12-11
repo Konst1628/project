@@ -1,0 +1,11 @@
+.MyButton {
+    background-color:rgb(143, 106, 106);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: rgb(0, 223, 223);
+    border-radius: 100px;
+  }
+  
