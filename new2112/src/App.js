@@ -19,7 +19,7 @@ export default function App() {
       phone: "(212) 555-1234", email: "mr.whiskaz@catnap.meow"
     },
 
-
+    
   ]
 
 
