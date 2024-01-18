@@ -1,0 +1,24 @@
+.About {
+    background-color:rgb(68, 167, 48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    color: rgb(17, 128, 128);
+    border-radius: 70px;
+    text-decoration: rgb(4, 107, 107);
+    font-size: medium;
+  }
+
+
+  .Contact {
+    background-color:rgb(100, 128, 94);
+    display: flex;
+    color: rgb(41, 63, 129);
+    align-items: center;
+    border-radius: 30px;
+    font-size: medium;
+    
+  }
+  
