@@ -1,0 +1,26 @@
+h2{
+    color: rgb(199, 49, 49);
+    font-weight: bold;
+    font-size: xx-large;
+ 
+}
+.block{
+    display: inline-block;
+    width: 21%;
+    height: 150px;
+    line-height:    170%;
+  /*  font-size: 2rem;
+    font-weight: bold;*/
+    text-align: center;
+    margin: 10%;
+ 
+}
+
+.hello {
+text-align: center;
+padding-right: 300px;
+}
+
+.red {
+    color: red;
+}
