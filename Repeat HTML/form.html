@@ -7,46 +7,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
-    <section>
-        <h1> Find the <span class="red">right</span> solution <span class="red">for your business</span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste tenetur assumenda iure error vel
-            accusamus nesciunt, non quo perspiciatis inventore similique eos eum minima repellat natus dolor accusantium
-            distinctio, corrupti omnis amet sint odit veniam! Dolores, fuga veritatis repellendus omnis libero, earum
-            quia aperiam possimus hic voluptates facilis provident.</p>
+    <div class="parent">
+        <div class="div1">
+            <section>
+                <h1> Find the <span class="red">right</span> solution <span class="red">for your business</span></h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste tenetur assumenda iure error vel
+                    accusamus nesciunt, non quo perspiciatis inventore similique eos eum minima repellat natus dolor
+                    accusantium
+                    distinctio, corrupti omnis amet sint odit veniam! Dolores, fuga veritatis repellendus omnis libero,
+                    earum
+                    quia aperiam possimus hic voluptates facilis provident.</p>
+        </div>
+        <div class="div2">
+            <form id="form">
+                <ul>
+                    <li>
+                        <label for="name"></label>
+                        <input type="text" id="user" placeholder="Name*" name="userName" />
+                        <span class="one"></span>
+                    <li>
+                        <label for="email"></label>
+                        <input type="email" id="email" placeholder="Email*" name="userEmail" />
+                        <span class="one"></span>
+                    </li>
 
-        <form>
-            <ul>
-                <li>
-                    <label for="name"></label>
-                    <input type="text" id="name" placeholder="Name*" name="userName" />
-                
+                    <li>
+                        <label for="phone"></label>
+                        <input type="text" id="phone" placeholder="Phone" name="userPhone" />
+                    </li>
+                    <li>
+                        <label for="message"></label>
+                        <textarea id="message" placeholder="How we can help you*" name="userMessage"></textarea>
+                        <span class="one"></span>
+                    </li>
 
-                <li>
-                    <label for="email"></label>
-                    <input type="email" id="email" placeholder="Email*" name="userEmail" />
-                </li>
-
-                <li>
-                    <label for="phone"></label>
-                    <input type="text" id="phone" placeholder="Phone" name="userPhone" />
-                </li>
-                <li>
-                    <label for="message"></label>
-                    <textarea id="message" placeholder="How we can help you*" name="userMessage"></textarea>
-                </li>
-                <li>
-                    <input id="submitBtn" type="submit" placeholder="Submit" value="Submit">
-                </li>
-                <li>
-                    <input id="checkbox" type="checkbox" />
-                    <label for="checkbox"> I agree to the <a href="#">Privacy Policy*</a>.</label>
-                </li>
-            </ul>
-        </form>
-    </section>
+                    <li>
+                        <input id="checkbox" type="checkbox" />
+                        <label for="checkbox"> I agree to the <a href="#">Privacy Policy*</a>.</label>
+                        <span class="one"></span>
+                    </li>
+                    <li>
+                        <input id="submitBtn" type="submit" placeholder="Submit" value="Submit">
+                    </li>
+                </ul>
+            </form>
+        </div>
+        </section>
+    </div>
+    <script src="form.js "></script>
 </body>
 
 </html>
