@@ -1,0 +1,16 @@
+img {
+    height: 50px;
+}
+section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3em;
+    padding: 10px;
+    margin: 0 auto;
+    position:relative;
+}
+
+div {
+    background-color: wheat;
+    padding: 10px 10px;
+}
